@@ -1,0 +1,18 @@
+<h1>{{problem_block_title}}</h1>
+<p>{{problem_block_text}}</p>
+<h1>{{solution_block_title}}</h1>
+<p>{{solution_block_text}}</p>
+
+{% for solution in solutions %}
+<p>{{solution}}</p>
+{% endfor %}
+
+{% for banner in banners %}
+<p>{{banner.text}}</p>
+<img src="/uploads/{{banner.image}}">
+{% endfor %}
+
+<h1>{{impact_block_title}}</h1>
+<p>{{impact_block_text}}</p>
+
+<img src="/uploads/{{impact_block_image}}">

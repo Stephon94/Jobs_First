@@ -6,7 +6,7 @@ from django.db import models
 class Banner (models.Model):
 
     text = models.CharField(max_length=200)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='home_banner',default= 'home_banner/no-banner-img.jpg')
 
     class Meta:
 		verbose_name_plural = 'Home Page Banner'
@@ -54,7 +54,7 @@ class Impact_Section(models.Model):
 
     title = models.CharField(max_length=200)
     text = models.CharField(max_length=400)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='impact_banner',default= 'impact_banner/no-banner-img.jpg')
 
 
     class Meta:
