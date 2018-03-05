@@ -1,0 +1,38 @@
+<a href=/about> <p>About Page </p></a>
+
+<h2>{{banner.text}}</h2>
+<img src="/uploads/{{banner.image}}">
+
+
+<h1>{{history_block_title}}</h1>
+<p>{{history_block_text}}</p>
+
+<h1>{{supporter_block_title}}</h1>
+<p>{{supporter_block_text}}</p>
+
+{% for supporter in supporters %}
+{% if supporter.active == True %}
+<p>{{supporter.name}}</p>
+{% endif %}
+{% endfor %}
+
+{% for director in directors %}
+{% if director.active == True %}
+<img src=/uploads/{{director.image}}>
+<p>{{director.first_name}}</p>
+<p>{{director.last_name}}</p>
+<p>{{director.postition}}</p>
+<p>{{director.company}}</p>
+{% endif %}
+{% endfor %}
+
+{% for staff in staff_members %}
+{% if staff.active == True %}
+<img src=/uploads/{{staff.image}}>
+<p>{{staff.first_name}}</p>
+<p>{{staff.last_name}}</p>
+<p>{{staff.postition}}</p>
+<p>{{staff.email}}</p>
+<p>{{staff.phone}}</p>
+{% endif %}
+{% endfor %}

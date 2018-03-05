@@ -1,0 +1,16 @@
+
+<h2>{{banner.text}}</h2>
+<img src="/uploads/{{banner.image}}">
+<img src="/uploads/{{banner.sub_image}}">
+
+{% for partnership_type in partnership_types %}
+
+<h1 style=color:red>{{partnership_type.0.title}}</h1>
+<p style=color:red>{{partnership_type.0.text}}</p>
+
+
+<img src="/uploads/{{partnership_type.1.image}}">
+<h1>{{partnership_type.1.name}}</h1>
+<p>{{partnership_type.1.text}}</p>
+
+{% endfor %}

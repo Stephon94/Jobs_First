@@ -1,0 +1,16 @@
+<h2>{{banner.text}}</h2>
+<img src="/uploads/{{banner.image}}">
+
+{% for article in articles %}
+<h1>{{article.title}}</h1>
+<p>{{article.text}}</p>
+<p>{{article.publish_date}}</p>
+<p>{{article.author_first_name}} {{article.author_last_name}}</p>
+{% endfor %}
+
+{% for article in featured %}
+<h1 style=color:red>{{article.title}}</h1>
+<p>{{article.text}}</p>
+<p>{{article.publish_date}}</p>
+<p>{{article.author_first_name}} {{article.author_last_name}}</p>
+{% endfor %}

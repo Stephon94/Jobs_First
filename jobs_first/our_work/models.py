@@ -6,7 +6,8 @@ from django.db import models
 class Banner (models.Model):
 
     text = models.CharField(max_length=200)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='our_work_banner',default= 'about_banner/no-banner-img.jpg')
+    sub_image = models.ImageField(upload_to='our_work_banner', default='our_work_banner/solutions.jpg')
 
     class Meta:
 		verbose_name_plural = 'Our Work Banner'
@@ -29,7 +30,7 @@ class Partnership_Type (models.Model):
 
 class Partner (models.Model):
 
-    image = models.ImageField()
+    image = models.ImageField(upload_to='partner',default= 'partners/No_person-1.jpg')
     name = models.CharField(max_length=200)
     text = models.CharField(max_length=400)
     partnership_type = models.ForeignKey(Partnership_Type, on_delete=models.CASCADE, null=True)
@@ -40,4 +41,4 @@ class Partner (models.Model):
 
     def __str__(self):
 
-        return '{} :{}'.format(name, self.active)
+        return '{} :{}'.format(self.name, self.active)

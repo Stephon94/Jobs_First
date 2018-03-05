@@ -7,7 +7,7 @@ from django.db import models
 class Banner (models.Model):
 
     text = models.CharField(max_length=200)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='about_banner',default= 'about_banner/no-banner-img.jpg')
 
     class Meta:
 		verbose_name_plural = 'About Us Banner'
@@ -30,7 +30,7 @@ class History_Section (models.Model):
 
 class Director (models.Model):
 
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='directors',default= 'directors/No_person-1.jpg')
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
@@ -42,11 +42,11 @@ class Director (models.Model):
 
     def __str__(self):
 
-        return '{} {}: {}'.format(first_name, last_name, self.active)
+        return '{} {}: {}'.format(self.first_name, self.last_name, self.active)
 
 class Staff_Member(models.Model):
 
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='staff',default= 'staff/No_person-1.jpg')
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
@@ -59,7 +59,7 @@ class Staff_Member(models.Model):
 
     def __str__(self):
 
-        return '{} {}: {}'.format(first_name, last_name, self.active)
+        return '{} {}: {}'.format(self.first_name, self.last_name, self.active)
 
 class Supporter_Section(models.Model):
 
