@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^about/', include('about_us.urls')),
     url(r'^our-work/', include('our_work.urls')),
     url(r'^publications/', include('publications.urls')),
+    url(r'^media/', include('media.urls')),
     url(r'^admin/', admin.site.urls),
 ]

@@ -21,10 +21,26 @@ def our_work_page(request):
     #         if partner.partnership_type == partnership:
     #             partnersANDtype.append([partnership, partner])
 
-    print partnersANDtype
+    for partner in partnersANDtype:
+        print partner,1
+    locations = [partner[1].get_position() for partner in partnersANDtype]
+    print locations,2
+
+    for location in locations:
+        print location,3
+
+    start_location = locations[2]
+    print start_location, 4
+
+    location_names = [[partner[1].get_position(), partner[1].name] for partner in partnersANDtype]
+    print location_names
 
     context_dict['banner'] = banner
     context_dict['partnership_types'] = partnersANDtype
+    context_dict['locations'] = locations
+    context_dict['start_location'] = start_location
+    context_dict['location_names'] = location_names
+
 
 
     return render(request,'our_work.html', context_dict)

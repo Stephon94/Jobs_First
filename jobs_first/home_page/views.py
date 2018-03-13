@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 
 from models import *
-from publications.models import *
+from media.models import *
+from our_work.models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 
@@ -17,11 +18,11 @@ def index(request):
     solution_block = Solution_Section.objects.get(id=1)
     solutions = Solution.objects.all()
     impact_block = Impact_Section.objects.get()
-    articles = Article.objects.all()
-
-    print impact_block
+    featured = [article for article in News.objects.all() if (article.is_news == False and article.external_link != "") and article.publish == True]
+    
 
     context_dict['banners'] = banners
+    context_dict['featured'] = featured
     context_dict['solutions'] = solutions
     context_dict['problem_block_title'] = problem_block.title
     context_dict['problem_block_text'] = problem_block.text

@@ -1,0 +1,34 @@
+<h2>{{banner.text}}</h2>
+<img src="/uploads/{{banner.image}}">
+
+{% for post in blog_posts %}
+{% if post.image %}
+
+<img src="/uploads/{{post.image}}">
+<h1>{{post.title}}</h1>
+<p>{{post.publish_date}}</p>
+<p>{{post.author_first_name}} {{post.author_last_name}}</p>
+
+{% else %}
+<h1>{{post.title}}</h1>
+<p>{{post.publish_date}}</p>
+<p>{{post.author_first_name}} {{post.author_last_name}}</p>
+{% endif %}
+{% endfor %}
+
+{% for press in in_press %}
+{% if press.image %}
+<img src="/uploads/{{press.image}}">
+<h1 style=color:red>{{press.title}}</h1>
+<p>{{press.publish_date}}</p>
+<p>{{press.author_first_name}} {{press.author_last_name}}</p>
+
+{% else %}
+
+<h1 style=color:red>{{press.title}}</h1>
+<p>{{press.text}}</p>
+<p>{{press.publish_date}}</p>
+<p>{{press.author_first_name}} {{press.author_last_name}}</p>
+
+{% endif %}
+{% endfor %}

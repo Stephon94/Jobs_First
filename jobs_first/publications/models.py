@@ -23,7 +23,7 @@ class Article(models.Model):
     publish_date = models.DateField()
     author_first_name = models.CharField(max_length=200)
     author_last_name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='Article', default='our_work_banner/solutions.jpg')
+    image = models.ImageField(upload_to='Article', blank=True ,null='True')
 
 
     class Meta:

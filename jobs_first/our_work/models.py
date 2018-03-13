@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+import geocoder
 
 class Banner (models.Model):
 
@@ -34,11 +35,17 @@ class Partner (models.Model):
     name = models.CharField(max_length=200)
     text = models.CharField(max_length=400)
     partnership_type = models.ForeignKey(Partnership_Type, on_delete=models.CASCADE, null=True)
+    address = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
+    state = models.CharField(max_length=200)
+    zipcode = models.CharField(max_length=200)
     active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name_plural = 'Partners'
 
+    def get_position(self):
+        return geocoder.google('{} {}, {},{}'.format(self.address, self.city, self.state, self.zipcode)).latlng
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)

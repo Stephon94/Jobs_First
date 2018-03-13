@@ -1,3 +1,14 @@
+{% for feature in featured %}
+{% if image %}
+<img src="/uploads/{{feature.image}}">
+{% else %}
+{% endif %}
+<h1>{{feature.title}}</h1>
+<p>{{feature.publish_date}}</p>
+<p>{{feature.author_first_name}} {{feature.author_last_name}}</p>
+{% endfor %}
+
+
 <h1>{{problem_block_title}}</h1>
 <p>{{problem_block_text}}</p>
 <h1>{{solution_block_title}}</h1>
