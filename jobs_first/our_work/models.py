@@ -44,8 +44,16 @@ class Partner (models.Model):
     class Meta:
         verbose_name_plural = 'Partners'
 
-    def get_position(self):
-        return geocoder.google('{} {}, {},{}'.format(self.address, self.city, self.state, self.zipcode)).latlng
+    def as_dict(self):
+		return {
+		"name":self.name,
+		"text":self.description,
+		"address":self.address,
+		"city":self.city,
+		"state":self.state,
+		"zip": self.zip_code
+		}
+
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)

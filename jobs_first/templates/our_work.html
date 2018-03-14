@@ -1,7 +1,7 @@
 
 
 
-<div id='map-canvas'style="width:400px;height:400px;background:yellow"> </div>
+<div id='map-canvas'style="width:600px;height:400px;background:yellow"> </div>
 
 <h2>{{banner.text}}</h2>
 <img src="/uploads/{{banner.image}}">
@@ -17,7 +17,7 @@
 <h1>{{partnership_type.1.name}}</h1>
 <p>{{partnership_type.1.text}}</p>
 <p>{{start_location}}</p>
-
+<p>{{locations}}</p>
 {% endfor %}
 
 
@@ -27,7 +27,7 @@
   function initialize() {
     var mapDiv = document.getElementById('map-canvas');
     map = new google.maps.Map(mapDiv, {
-      center: new google.maps.LatLng({{start_location.0}},{{start_location.1}}),
+      center: new google.maps.LatLng({{start_location.0.0}},{{start_location.0.1}}),
       zoom: 12,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -39,16 +39,14 @@
   function addMarkers() {
 
 
-        {% for location in locations_names %}
-        var point = new google.maps.LatLng({{location.0.0}},{{start_location.0.1}});
+        {% for location in locations %}
+        var point = new google.maps.LatLng({{location.0.0}},{{location.0.1}});
             var marker = new google.maps.Marker({
             position: point,
             map: map
         });
-        {% for partner in location_names %}
-        {% if partner.0 == start_location %}
              marker['infowindow']  = new google.maps.InfoWindow({
-                     content: "<h1>{{partner.1}}</h1> ,"
+                     content: "<h1>{{location.1}}</h1> ,"
         });
             google.maps.event.addListener(marker, 'click', function() {
                 //window.location.href = this.url;
@@ -62,14 +60,8 @@
 
             });
 
-          {% endif %}
           {% endfor %}
 
-
-
-
-
-        {% endfor %}
 
   }
 
