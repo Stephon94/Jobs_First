@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from autoslug import AutoSlugField
 from django.db import models
 from ckeditor.fields import RichTextField
 
@@ -25,7 +26,7 @@ class News(models.Model):
     text = RichTextField(blank=True)
     author_first_name = models.CharField(max_length=200)
     author_last_name = models.CharField(max_length=200)
-    slug = models.SlugField(blank=True)
+    slug = AutoSlugField(populate_from='title')
     publish = models.BooleanField(default=False)
     is_news = models.BooleanField(default=False)
 

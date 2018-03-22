@@ -2,7 +2,9 @@
 from __future__ import unicode_literals
 
 from django.db import models
-import geocoder
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim()
 
 class Banner (models.Model):
 
@@ -44,16 +46,11 @@ class Partner (models.Model):
     class Meta:
         verbose_name_plural = 'Partners'
 
-    def as_dict(self):
-		return {
-		"name":self.name,
-		"text":self.description,
-		"address":self.address,
-		"city":self.city,
-		"state":self.state,
-		"zip": self.zip_code
-		}
+    def get_coordinates(self):
 
+        address = "{} {}, {}, {}".format(self.address, self.city, self.state, self.zipcode)
+        return {(geolocator.geocode(address).latitude, geolocator.geocode(address).longitude):(self.name, self.text)}
+    
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)

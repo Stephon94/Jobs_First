@@ -21,3 +21,9 @@ def news_page(request):
     context_dict['featured'] = featured
 
     return render(request,'media.html', context_dict)
+
+def selected_post(request, post_slug):
+    context_dict = {}
+    post = News.object.get(slug=post_slug)
+
+    return render(request, 'post_detail.html')

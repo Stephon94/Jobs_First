@@ -5,6 +5,7 @@ from jobs_first import settings
 
 urlpatterns = [
     url(r'^$', views.news_page, name='news_page'),
+    url(r'^(?P<slug>[-\w]+)/$', views.News, name='specific_news' )
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
