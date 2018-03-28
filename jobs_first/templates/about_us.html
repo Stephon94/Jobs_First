@@ -1,38 +1,69 @@
 <a href=/about> <p>About Page </p></a>
 
-<h2>{{banner.text}}</h2>
-<img src="/uploads/{{banner.image}}">
+<div class="header-img article-header">
+	<h1>{{banner.text}}</h1>
+</div>
 
+<div class="container-fluid text-center">
+	<h1 class="title-1">{{history_block_title}}</h1>
+	<hr>
+	<p>{{history_block_text}}</p>
+</div>
 
-<h1>{{history_block_title}}</h1>
-<p>{{history_block_text}}</p>
+<div class="container-fluid text-center">
+	<h1 class="title-1">Board of Directors</h1>
+	<hr>
+	<div class="row text-jfblue">
+		{% for director in directors %}
+			{% if director.active == True %}
+				<div class="col-3 mx-auto">
+					<img src="/uploads/{{director.image}}" class="w-50 rounded-circle user-img">
+					<p><b>{{director.first_name}} {{director.last_name}}</b></p>
+					<p>{{director.postition}}</p>
+					<p>{{director.company}}</p>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
 
-<h1>{{supporter_block_title}}</h1>
-<p>{{supporter_block_text}}</p>
+<div class="container-fluid text-center">
+	<h1 class="title-1">Board of Leadership and Staff</h1>
+	<hr>
+	<div class="row text-jfblue" id="staff">
+		{% for staff in staff_members %}
+			{% if staff.active == True %}
+				<div class="col-3 mx-auto">
+					<img src="http://via.placeholder.com/100" class="w-50 rounded-circle user-img" data-toggle="collapse" data-target="#{{staff.first_name}}{{staff.last_name}}">
+					<p><b>{{staff.first_name}}{{staff.last_name}}</b></p>
+					<p>{{staff.postition}}</p>
+					<p>{{staff.email}}</p>
+					<p>{{staff.phone}}</p>
+					<div class="collapse" id="{{staff.first_name}}{{staff.last_name}}" data-parent="#staff">
+						<p class="text-justify text-dark">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
 
-{% for supporter in supporters %}
-{% if supporter.active == True %}
-<p>{{supporter.name}}</p>
-{% endif %}
-{% endfor %}
-
-{% for director in directors %}
-{% if director.active == True %}
-<img src=/uploads/{{director.image}}>
-<p>{{director.first_name}}</p>
-<p>{{director.last_name}}</p>
-<p>{{director.postition}}</p>
-<p>{{director.company}}</p>
-{% endif %}
-{% endfor %}
-
-{% for staff in staff_members %}
-{% if staff.active == True %}
-<img src=/uploads/{{staff.image}}>
-<p>{{staff.first_name}}</p>
-<p>{{staff.last_name}}</p>
-<p>{{staff.postition}}</p>
-<p>{{staff.email}}</p>
-<p>{{staff.phone}}</p>
-{% endif %}
-{% endfor %}
+<div class="container-fluid">
+	<h1 class="title-1 text-center">{{supporter_block_title}}</h1>
+	<hr>
+	<div class="row">
+		<div class="col-8 mx-auto text-center">
+			<p>{{supporter_block_text}}</p>
+		</div>
+	</div>
+	<div class="row">
+		{% for supporter in supporters %}
+			{% if supporter.active == True %}
+		<div class="col-4 mx-auto">
+			<i class="fa fa-circle"></i>{{supporter.name}}<p>
+		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
