@@ -1,0 +1,187 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %} {% endblock %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">
+				<img src="http://via.placeholder.com/350x50" width="350" height="50" class="d-inline-block align-top" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<b><a class="nav-link" href="/about">ABOUT US</a></b>
+					</li>
+					<li class="nav-item">
+						<b><a class="nav-link" href="/our-work">OUR WORK</a></b>
+					</li>
+					<li class="nav-item">
+						<b><a class="nav-link" href="/publications">PUBLICATIONS</a></b>
+					</li>
+					<li class="nav-item">
+						<b><a class="nav-link" href="/media">MEDIA</a></b>
+					</li>
+					<li class="nav-item join">
+						<b><a class="nav-link text-white" href="#" data-toggle="modal" data-target="#contact-modal">JOIN US</a></b>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Button trigger modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content bg-blue">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="fas fa-times fa-2x"></i>
+						</button>
+					</div>
+					<h3 class="modal-title text-center text-white" id="exampleModalLongTitle">JOIN US</h3>
+					<div class="modal-body">
+						<form class="px-3">
+							<div class="form-group row">
+								<label for="inputName" class="col-form-label text-white">Your Name</label>
+								<input type="text" class="form-control" id="inputName" placeholder="Your Name">
+							</div>
+							<div class="form-group row">
+								<label for="inputTitle" class="col-form-label text-white">Your Title</label>
+								<input type="text" class="form-control" id="inputTitle" placeholder="Your Title">
+							</div>
+							<div class="form-group row">
+								<label for="inputOrg" class="col-form-label text-white">Your Org</label>
+								<input type="text" class="form-control" id="inputOrg" placeholder="Your Org">
+							</div>
+							<div class="form-group row">
+								<label for="inputEmail" class="col-form-label text-white">Your Email</label>
+								<input type="text" class="form-control" id="inputEmail" placeholder="Your Email">
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-12">
+									<button class="btn w-100 green-btn text-white"><h4>Send</h4></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+{% block content %}
+{% endblock %}
+
+
+
+		<div class="container-fluid footer">
+			<div class="row vertical-text">
+				<div class="col-md-4">
+					<div class="col-md-8 offset-md-2">
+						<ul class="nav flex-column">
+							<li class="nav-item-footer">
+								<a class="nav-link" href="/about">ABOUT US</a>
+							</li>
+							<li class="nav-item-footer">
+								<a class="nav-link" href="/our-work">OUR WORK</a>
+							</li>
+							<li class="nav-item-footer">
+								<a class="nav-link" href="/publications">PUBLICATIONS</a>
+							</li>
+							<li class="nav-item-footer">
+								<a class="nav-link" href="/media">MEDIA</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="text-center">
+						<h2 class="text-white align-middle">Connect</h2>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<span class="fa-stack fa-2x">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+								</span>
+							</div>
+							<div class="col-md-3">
+								<span class="fa-stack fa-2x">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+								</span>
+							</div>
+							<div class="col-md-3">
+								<span class="fa-stack fa-2x">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</div>
+							<div class="col-md-3">
+								<span class="fa-stack fa-2x">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h2 class="text-white text-center">Contact Us</h2>
+					<form>
+						<div class="form-group row">
+							<label for="inputName" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Name</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputName" placeholder="Your Name">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputTitle" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Title</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputTitle" placeholder="Your Title">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputOrg" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Org</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputOrg" placeholder="Your Org">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputEmail" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Email</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="inputEmail" placeholder="Your Email">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputSubject" class="col-sm-2 offset-sm-2 col-form-label text-white">Subject</label>
+							<div class="col-sm-8">
+								<textarea type="text" class="form-control" id="inputSubject" placeholder=""></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>© Copyright The Financial Clinic | Privacy Policy</p>
+		</div>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/js.js' %}"></script>
+
+	</body>
+	</html>

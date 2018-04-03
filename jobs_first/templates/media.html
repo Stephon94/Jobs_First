@@ -1,34 +1,117 @@
-<h2>{{banner.text}}</h2>
-<img src="/uploads/{{banner.image}}">
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Jobs First | Media{% endblock %}
+{% block content %}
 
-{% for post in blog_posts %}
-{% if post.image %}
+<div class="header-img media-header">
+	<h1 class="text-white text-center container">{{banner.text}}</h1>
+</div>
+<br>
+<br>
 
-<img src="/uploads/{{post.image}}">
-<h1>{{post.title}}</h1>
-<p>{{post.publish_date}}</p>
-<p>{{post.author_first_name}} {{post.author_last_name}}</p>
 
-{% else %}
-<h1>{{post.title}}</h1>
-<p>{{post.publish_date}}</p>
-<p>{{post.author_first_name}} {{post.author_last_name}}</p>
-{% endif %}
-{% endfor %}
 
-{% for press in in_press %}
-{% if press.image %}
-<img src="/uploads/{{press.image}}">
-<h1 style=color:red>{{press.title}}</h1>
-<p>{{press.publish_date}}</p>
-<p>{{press.author_first_name}} {{press.author_last_name}}</p>
+<div class="row">
+	<div class="col-md-6">
+		<h5 class="title-1 text-center">News</h5>
+		<hr>
+		<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" >
+			<li class="nav-item">
+				<a class="nav-link active" id="press-tab" data-toggle="tab" href="#press" role="tab" aria-controls="press" aria-selected="true">PRESS</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="blog-tab" data-toggle="tab" href="#blog" role="tab" aria-controls="blog" aria-selected="false">BLOG</a>
+			</li>
+		</ul>
 
-{% else %}
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="press" role="tabpanel" aria-labelledby="press-tab">
+				{% for press in in_press %}
+					{% if press.image %}
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-4">
+								<img src="/uploads/{{press.image}}" class="img-thumbnail">
+							</div>
+							<div class="col-md-8 px-3">
+								<div class="card-block px-3">
+									<h5 class="title-1">{{press.publish_date}}</h5>
+									<h6 class="card-text">{{press.title}}</h6>
+									<i>{{press.author_first_name}} {{press.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% else %}
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-12 px-3">
+								<div class="card-block px-3">
+									<h5 class="title-1">{{press.publish_date}}</h5>
+									<h6 class="card-text">{{press.title}}</h6>
+									<i>{{press.author_first_name}} {{press.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+			<div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+				{% for post in blog_posts %}
+					{% if post.image %}
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-4">
+								<img src="/uploads/{{post.image}}" class="img-thumbnail">
+							</div>
+							<div class="col-md-8 px-3">
+								<div class="card-block px-3">
+									<h5 class="title-1">{{post.publish_date}}</h5>
+									<h6 class="card-text">{{post.title}}</h6>
+									<i>{{post.author_first_name}} {{post.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% else %}
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-12 px-3">
+								<div class="card-block px-3">
+									<h5 class="title-1">{{post.publish_date}}</h5>
+									<h6 class="card-text">{{post.title}}</h6>
+									<i>{{post.author_first_name}} {{post.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 
-<h1 style=color:red>{{press.title}}</h1>
-<p>{{press.text}}</p>
-<p>{{press.publish_date}}</p>
-<p>{{press.author_first_name}} {{press.author_last_name}}</p>
+	<div class="col-md-6">
+		<h5 class="title-1 text-center">Featured</h5>
+		<hr>
+		<!-- FOR EACH FEATURE -->
+		<div class="col-md-7 offset-md-3">
+			<div class="row ">
+				<div class="col-md-4">
+					<img src="http://via.placeholder.com/200x200" class="img-thumbnail">
+				</div>
+				<div class="col-md-8 px-3">
+					<div class="card-block px-3">
+						<h5 class="title-1">09/08/2018</h5>
+						<h6 class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- EndFOR -->
+	</div>
 
-{% endif %}
-{% endfor %}
+</div>
+
+{% endblock %}
