@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from geopy.exc import GeocoderTimedOut
 from django.db import models
 from geopy.geocoders import Nominatim
 
@@ -46,11 +46,22 @@ class Partner (models.Model):
     class Meta:
         verbose_name_plural = 'Partners'
 
+
     def get_coordinates(self):
 
+        def do_geocode(address):
+            try:
+                print "this ran"
+                return {(geolocator.geocode(address).latitude, geolocator.geocode(address).longitude):(self.name, self.text)}
+            except GeocoderTimedOut:
+                do_geocode(address)
+
         address = "{} {}, {}, {}".format(self.address, self.city, self.state, self.zipcode)
-        return {(geolocator.geocode(address).latitude, geolocator.geocode(address).longitude):(self.name, self.text)}
-    
+
+        return do_geocode(address)
+
+
+
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)

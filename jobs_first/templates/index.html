@@ -147,6 +147,263 @@
 </div>
 <!-- MAP GOES HERE ON THIS DIV vvvvvvv -->
 <div class="vertical-center bg2">
+
+	<div class="vertical-center" id="map"></div>
+
+	<script type="text/javascript">
+
+			</script>
+
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcW1PxLnVz7Jw884zdUA5JW-6LjTC6tr4&callback=initMap" async defer></script>
+
+			<script type="text/javascript">
+				function initMap() {
+					var styles = [
+					{
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#f5f5f5"
+						}
+						]
+					},
+					{
+						"elementType": "labels.icon",
+						"stylers": [
+						{
+							"visibility": "off"
+						}
+						]
+					},
+					{
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#616161"
+						}
+						]
+					},
+					{
+						"elementType": "labels.text.stroke",
+						"stylers": [
+						{
+							"color": "#f5f5f5"
+						}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#4563ab"
+						}
+						]
+					},
+					{
+						"featureType": "administrative.land_parcel",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#bdbdbd"
+						}
+						]
+					},
+					{
+						"featureType": "poi",
+						"stylers": [
+						{
+							"visibility": "off"
+						}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#eeeeee"
+						}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#757575"
+						}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#e5e5e5"
+						}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#ffffff"
+						}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry.fill",
+						"stylers": [
+						{
+							"color": "#e6f1c9"
+						}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#757575"
+						}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#dadada"
+						}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+						{
+							"color": "#b5d76a"
+						}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#616161"
+						}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "geometry.fill",
+						"stylers": [
+						{
+							"color": "#ebf3d6"
+						}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					},
+					{
+						"featureType": "transit.line",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#e5e5e5"
+						}
+						]
+					},
+					{
+						"featureType": "transit.station",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#eeeeee"
+						}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#c9c9c9"
+						}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					}
+					];
+
+					$(".map-overlay").hide();
+					var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+					map = new google.maps.Map(document.getElementById("map"), {
+						center: new google.maps.LatLng({{start_location.0}},{{start_location.1}}),
+						zoom: 15,
+						disableDefaultUI: true
+					});
+
+					map.mapTypes.set('map_style', styledMap);
+					map.setMapTypeId('map_style');
+
+					google.maps.event.addListenerOnce(map, 'tilesloaded', addMarkers);
+					$(".map-overlay").appendTo("#map");
+				}
+
+				function addMarkers() {
+				        {% for location in locations %}
+				        {% for coordinates, info in location.items %}
+				        var point = new google.maps.LatLng({{coordinates.0}},{{coordinates.1}});
+				        var marker = new google.maps.Marker({
+				        	position: point,
+				        	map: map
+				        });
+
+				        google.maps.event.addListener(marker, 'mouseover', function() {
+				        	map.panTo(marker.getPosition());
+				        	$( "#org-title" ).html( "{{info.0}}" );
+				        	$( "#org-des" ).html( "{{info.1}}" );
+				        	$(".map-overlay").show();
+				        });
+
+				        google.maps.event.addListener(marker, 'mouseout', function() {
+				        	$(".map-overlay").hide();
+				        });
+								{% endfor %}
+								{% endfor %}
+				      }
+				      initMap();
+				  </script>
 	<br>
 	<div class="col-md-4 offset-md-1 map-overlay">
 		<h4 class="title-1 text-center">District 10</h4>
