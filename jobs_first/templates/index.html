@@ -4,7 +4,7 @@
 {% block content %}
 
 
-<img src="/uploads/{{impact_block_image}}">
+<!-- <img src="/uploads/{{impact_block_image}}"> -->
 
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -68,6 +68,21 @@
 						<div class="row ">
 							<div class="col-md-4">
 								<img src="/uploads/{{feature.image}}" class="img-thumbnail">
+							</div>
+							<div class="col-md-8 px-3">
+								<div class="card-block px-3">
+									<h2 class="title-1">{{feature.publish_date}}</h2>
+									<h5 class="card-text">{{feature.title}}</h5>
+									<i>{{feature.author_first_name}} {{feature.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% else %}
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-4">
+								<img src="http://via.placeholder.com/100" class="img-thumbnail">
 							</div>
 							<div class="col-md-8 px-3">
 								<div class="card-block px-3">
@@ -389,8 +404,11 @@
 				        	map: map
 				        });
 
+								console.log({{coordinates.0}},{{coordinates.1}})
+								console.log('{{info.0}}','{{info.1}}')
+
 				        google.maps.event.addListener(marker, 'mouseover', function() {
-				        	map.panTo(marker.getPosition());
+				        	map.panTo({lat:{{coordinates.0}},lng:{{coordinates.1}}});
 				        	$( "#org-title" ).html( "{{info.0}}" );
 				        	$( "#org-des" ).html( "{{info.1}}" );
 				        	$(".map-overlay").show();
@@ -406,22 +424,8 @@
 				  </script>
 	<br>
 	<div class="col-md-4 offset-md-1 map-overlay">
-		<h4 class="title-1 text-center">District 10</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-		<div class="row text-center">
-			<div class="col-md-4">
-				<div id="progress" data-percentage="50" data-track-width="12" data-track-colour="4563ab" data-fill-colour="b5d76a" data-text-colour="b5d76a" data-stroke-spacing="4"></div>
-				<p class="text-secondary">lable</p>
-			</div>
-			<div class="col-md-4">
-				<div id="progress" data-percentage="50" data-track-width="12" data-track-colour="4563ab" data-fill-colour="b5d76a" data-text-colour="b5d76a" data-stroke-spacing="4"></div>
-				<p class="text-secondary">lable</p>
-			</div>
-			<div class="col-md-4">
-				<div id="progress" data-percentage="50" data-track-width="12" data-track-colour="4563ab" data-fill-colour="b5d76a" data-text-colour="b5d76a" data-stroke-spacing="4"></div>
-				<p class="text-secondary">lable</p>
-			</div>
-		</div>
+		<h4 class="title-1 text-center" id=org-title>District 10</h4>
+		<p id=org-des>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 	</div>
 </div>
 

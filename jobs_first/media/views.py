@@ -22,8 +22,9 @@ def news_page(request):
 
     return render(request,'media.html', context_dict)
 
-def selected_post(request, post_slug):
+def selected_post(request, slug):
     context_dict = {}
-    post = News.object.get(slug=post_slug)
+    post = News.objects.get(slug=slug)
+    context_dict['post'] = post
 
-    return render(request, 'post_detail.html')
+    return render(request, 'article.html', context_dict)

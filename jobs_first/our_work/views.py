@@ -17,27 +17,16 @@ def our_work_page(request):
     banner = Banner.objects.get(id=1)
     partnership_types = Partnership_Type.objects.all()
     partners = Partner.objects.all()
-    location_coordinates = []
 
 
     partnersANDtype = [[partnership, partner] for partnership in partnership_types for partner in partners if partner.partnership_type == partnership]
-
-    for partner in partners:
-        location_coordinates.append(partner.get_coordinates())
-
-
-    start_location = random.choice(list(location_coordinates[0]))
-    print start_location
-
+    print partnersANDtype
 
 
 
     context_dict['banner'] = banner
-    context_dict['partnership_types'] = partnersANDtype
-    context_dict['locations'] = location_coordinates[3:]
-    context_dict['start_location'] = start_location
-
-
+    context_dict['partnership_types'] = partnership_types
+    context_dict['partner_w_types'] = partnersANDtype
 
     return render(request,'our_work.html', context_dict)
 
