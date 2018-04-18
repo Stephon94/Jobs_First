@@ -18,7 +18,7 @@ class Banner (models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=5000)
+    text = models.TextField()
     is_featured = models.BooleanField(default=False)
     publish_date = models.DateField()
     author_first_name = models.CharField(max_length=200)

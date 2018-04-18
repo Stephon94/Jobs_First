@@ -6,7 +6,7 @@ from django.db import models
 
 class Banner (models.Model):
 
-    text = models.CharField(max_length=200)
+    text = models.CharField(max_length=256)
     image = models.ImageField(upload_to='about_banner',default= 'about_banner/no-banner-img.jpg')
 
     class Meta:
@@ -18,8 +18,8 @@ class Banner (models.Model):
 
 class History_Section (models.Model):
 
-    title = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    title = models.CharField(max_length=256)
+    text = models.TextField()
 
     class Meta:
         verbose_name_plural = "History Section"
@@ -31,10 +31,9 @@ class History_Section (models.Model):
 class Director (models.Model):
 
     image = models.ImageField(upload_to='directors',default= 'directors/No_person-1.jpg')
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    position = models.CharField(max_length=200)
-    company = models.CharField(max_length=200)
+    name = models.CharField(max_length=256)
+    position = models.CharField(max_length=256)
+    company = models.CharField(max_length=256)
     active = models.BooleanField(default=True)
 
     class Meta:
@@ -42,15 +41,15 @@ class Director (models.Model):
 
     def __str__(self):
 
-        return '{} {}: {}'.format(self.first_name, self.last_name, self.active)
+        return '{}: {}'.format(self.name, self.active)
 
 class Staff_Member(models.Model):
 
     image = models.ImageField(upload_to='staff',default= 'staff/No_person-1.jpg')
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    position = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
+    name = models.CharField(max_length=256)
+    position = models.CharField(max_length=256)
+    text = models.TextField()
+    email = models.EmailField(max_length=256)
     phone = PhoneNumberField()
     active = models.BooleanField(default=True)
 
@@ -59,12 +58,12 @@ class Staff_Member(models.Model):
 
     def __str__(self):
 
-        return '{} {}: {}'.format(self.first_name, self.last_name, self.active)
+        return '{}: {}'.format(self.name, self.active)
 
 class Supporter_Section(models.Model):
 
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    text = models.TextField()
 
     class Meta:
         verbose_name_plural = 'Supporter Section'
@@ -75,7 +74,7 @@ class Supporter_Section(models.Model):
 
 class Supporter(models.Model):
 
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=256)
     active = models.BooleanField(default=True)
 
     class Meta:

@@ -25,14 +25,17 @@ def index(request):
     location_coordinates = []
 
     for partner in partners:
-        print partner
-        location_coordinates.append(partner.get_coordinates())
+        if partner.address is not None:
+            location_coordinates.append(partner.get_coordinates())
 
-    location_coordinates = location_coordinates[len(location_coordinates)/2:]
+    if location_coordinates:
+        start_location = random.choice(list(location_coordinates[0]))
+        context_dict['start_location'] = start_location
+        if len(location_coordinates) > 1:
+            location_coordinates = location_coordinates[len(location_coordinates)/2:]
+            context_dict['locations'] = location_coordinates
 
-
-    start_location = random.choice(list(location_coordinates[0]))
-
+    
 
 
     context_dict['banners'] = banners
@@ -45,8 +48,8 @@ def index(request):
     context_dict['impact_block_title'] = impact_block.title
     context_dict['impact_block_text'] = impact_block.text
     context_dict['impact_block_image'] = impact_block.image
-    context_dict['locations'] = location_coordinates
-    context_dict['start_location'] = start_location
+    
+    
 
 
     return render(request,'index.html', context_dict)

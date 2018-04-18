@@ -22,7 +22,7 @@ class Banner (models.Model):
 class Partnership_Type (models.Model):
 
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    text = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Type of Partnership"
@@ -35,12 +35,12 @@ class Partner (models.Model):
 
     image = models.ImageField(upload_to='partner',default= 'partners/No_person-1.jpg')
     name = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    text = models.TextField()
     partnership_type = models.ForeignKey(Partnership_Type, on_delete=models.CASCADE, null=True)
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
-    state = models.CharField(max_length=200)
-    zipcode = models.CharField(max_length=200)
+    address = models.CharField(max_length=200, null=True, blank=True)
+    city = models.CharField(max_length=200, null=True, blank=True)
+    state = models.CharField(max_length=200, null=True, blank=True)
+    zipcode = models.CharField(max_length=200, null=True, blank=True)
     active = models.BooleanField(default=True)
 
     class Meta:

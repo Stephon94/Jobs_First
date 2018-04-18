@@ -17,8 +17,9 @@
 	<div class="carousel-inner">
 		{% for banner in banners %}
 		<div class="carousel-item active">
-			<img class="d-block w-100" src="/uploads/{{banner.image}}" alt="First slide">
-			<p>{{banner.text}}</p>
+			<div style="background:url(/uploads/{{banner.image}})no-repeat center center" alt="First slide">
+				<p>{{banner.text}}</p>
+			</div>
 		</div>
 		{% endfor %}
 	</div>
@@ -383,7 +384,13 @@
 					var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
 					map = new google.maps.Map(document.getElementById("map"), {
-						center: new google.maps.LatLng({{start_location.0}},{{start_location.1}}),
+						center: new google.maps.LatLng(
+							{% if start_location %}
+							{{start_location.0}},{{start_location.1}}
+							{% else %}
+							40.75738,-73.990107
+							{% endif %}
+							),
 						zoom: 15,
 						disableDefaultUI: true
 					});

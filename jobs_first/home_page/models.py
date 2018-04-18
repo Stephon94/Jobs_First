@@ -18,7 +18,7 @@ class Banner (models.Model):
 class Problem_Section(models.Model):
 
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=200)
+    text = models.TextField()
 
     class Meta:
 		verbose_name_plural = 'Home Page Problem Section'
@@ -30,7 +30,7 @@ class Problem_Section(models.Model):
 class Solution_Section(models.Model):
 
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    text = models.TextField()
 
     class Meta:
 		verbose_name_plural = 'Home Page Solution Section'
@@ -53,9 +53,8 @@ class Solution(models.Model):
 class Impact_Section(models.Model):
 
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=400)
+    text = models.TextField()
     image = models.ImageField(upload_to='impact_banner',default= 'impact_banner/no-banner-img.jpg')
-
 
     class Meta:
 		verbose_name_plural = 'Home Page Impact Section'
