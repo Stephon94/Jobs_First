@@ -16,6 +16,7 @@ def publications_page(request):
             context_dict['results'] = -1
 
     banner = Banner.objects.get(id=1)
+    print vars(banner)
     articles = [article for article in Article.objects.all() if article.is_featured == False]
     featured = [article for article in Article.objects.all() if article.is_featured == True]
 

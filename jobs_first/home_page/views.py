@@ -25,6 +25,7 @@ def index(request):
     location_coordinates = []
 
     for partner in partners:
+        print vars(partner)
         if partner.address is not None:
             location_coordinates.append(partner.get_coordinates())
 
