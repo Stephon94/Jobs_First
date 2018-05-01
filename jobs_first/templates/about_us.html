@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="header-img" style="background:url(/uploads/{{banner.image}})no-repeat center center">
-	<h1>{{banner.text}}</h1>
+	<h1 class="text-white">{{banner.text}}</h1>
 </div>
 
 <div class="container-fluid text-center">
@@ -64,7 +64,7 @@
 		{% for supporter in supporters %}
 			{% if supporter.active == True %}
 		<div class="col-4 mx-auto">
-			<i class="fa fa-circle"></i>{{supporter.name}}<p>
+			<i class="fa fa-circle"></i>&nbsp;{{supporter.name}}<p>
 		</div>
 			{% endif %}
 		{% endfor %}

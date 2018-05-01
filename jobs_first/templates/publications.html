@@ -67,9 +67,11 @@
 						{% for article in articles %}
 						<div class="row">
 							<div class="col-xs-12">
-								<h4><i class="fas fa-minus fa-2x dash"></i> {{article.title}}</h4>
-								<p>{{article.text|truncatechars:150}}</p>
-								<h6>{{article.author_first_name}} {{article.author_last_name}}</h6>
+								<a href="#">
+									<h4><i class="fas fa-minus fa-2x dash"></i> {{article.title}}</h4>
+									<p class="text-dark">{{article.text|truncatechars:150}}</p>
+									<h6>{{article.author_first_name}} {{article.author_last_name}}</h6>
+								</a>
 							</div>
 						</div>
 						{% endfor %}
@@ -79,12 +81,12 @@
 					<h4 class="title-1 text-center">Featured</h4>
 					<br>
 					{% for feature in featured %}
-					<div class="card">
+					<a href="#">
 						<img class="card-img-top" src="http://via.placeholder.com/286x180">
 						<div class="card-body">
 							<h6 class="card-title">{{feature.title}}</h6>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</div>

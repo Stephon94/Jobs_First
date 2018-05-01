@@ -44,39 +44,29 @@
 
 		<!-- Modal -->
 		<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 				<div class="modal-content bg-blue">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<i class="fas fa-times fa-2x"></i>
+							<i class="fas fa-times"></i>
 						</button>
 					</div>
-					<h3 class="modal-title text-center text-white" id="exampleModalLongTitle">JOIN US</h3>
-					<div class="modal-body">
-						<form class="px-3">
-							<div class="form-group row">
-								<label for="inputName" class="col-form-label text-white">Your Name</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Your Name">
-							</div>
-							<div class="form-group row">
-								<label for="inputTitle" class="col-form-label text-white">Your Title</label>
-								<input type="text" class="form-control" id="inputTitle" placeholder="Your Title">
-							</div>
-							<div class="form-group row">
-								<label for="inputOrg" class="col-form-label text-white">Your Org</label>
-								<input type="text" class="form-control" id="inputOrg" placeholder="Your Org">
-							</div>
-							<div class="form-group row">
-								<label for="inputEmail" class="col-form-label text-white">Your Email</label>
-								<input type="text" class="form-control" id="inputEmail" placeholder="Your Email">
-							</div>
-							<div class="form-group row">
-								<div class="col-sm-12">
-									<button class="btn w-100 green-btn text-white"><h4>Send</h4></button>
-								</div>
-							</div>
-						</form>
-					</div>
+					<script>
+				
+						// $(".margintopmore").click(function(){
+						// 	alert("The paragraph was clicked.");
+						// });
+						function iframeclick(){
+							
+							$("#nationBuilder").contents().find(".margintopmore").click(function() {
+								alert( "Handler for .click() called." );
+							});
+							alert("loaded");
+						}
+
+					</script>
+				
+					<iframe src="https://jobsfirstnycorg.nationbuilder.com/" id="nationBuilder" onload="iframeclick()" style="width: 100%; height:75vh;"></iframe>
 				</div>
 			</div>
 		</div>
@@ -168,6 +158,7 @@
 								<textarea type="text" class="form-control" id="inputSubject" placeholder=""></textarea>
 							</div>
 						</div>
+						<button type="submit" class="btn green-btn" style="margin-left: 0px"><b>Submit</b></button>
 					</form>
 				</div>
 			</div>

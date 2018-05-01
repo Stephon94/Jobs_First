@@ -69,3 +69,13 @@ class Impact_Section_Image(models.Model):
 
     class Meta:
 		verbose_name_plural = 'Impact Section Carousel Images'
+
+
+class Logo(models.Model):
+
+    image = models.ImageField(null=True)
+
+    class Meta:
+        verbose_name_plural = 'Main Logo'
+
+

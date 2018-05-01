@@ -17,8 +17,8 @@
 	<div class="carousel-inner">
 		{% for banner in banners %}
 		<div class="carousel-item active">
-			<div style="background:url(/uploads/{{banner.image}})no-repeat center center" alt="First slide">
-				<p>{{banner.text}}</p>
+			<div class="carousel-content" style="background:url(/uploads/{{banner.image}})no-repeat center center" alt="First slide">
+				<h1 class="text-white text-center">{{banner.text}}</h1>
 			</div>
 		</div>
 		{% endfor %}
@@ -35,23 +35,25 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-7 text-center">
-			<h1 class="title-1">{{problem_block_title}}</h1>
-			<hr>
-			<b >{{problem_block_text}}</b>
-			<br>
-			<br>
-			<br>
-			<br>
-			<h1 class="title-1">{{solution_block_title}}</h1>
-			<hr>
-			<b>{{solution_block_text}}</b>
-			<br>
-			<br>
-			<div class="col-md-7 offset-md-3 text-justify">
+		<div class="col-md-7">
+			<div class="text-center">
+				<h1 class="title-1">{{problem_block_title}}</h1>
+				<hr>
+				<b >{{problem_block_text}}</b>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="title-1">{{solution_block_title}}</h1>
+				<hr>
+				<b>{{solution_block_text}}</b>
+				<br>
+				<br>
+			</div>
+			<div class="col-md-10 offset-md-1">
 				<ul class="list-bullet">
 					{% for solution in solutions %}
-					<li><p><i class="fa fa-circle"></i>{{solution}}</p></li>
+					<li><p><i class="fa fa-circle"></i>&nbsp;{{solution}}</p></li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -65,35 +67,39 @@
 			</div>
 			{% for feature in featured %}
 				{% if image %}
-					<div class="col-md-7 offset-md-3">
+				<a href="">
+					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
 								<img src="/uploads/{{feature.image}}" class="img-thumbnail">
 							</div>
 							<div class="col-md-8 px-3">
 								<div class="card-block px-3">
-									<h2 class="title-1">{{feature.publish_date}}</h2>
+									<h4 class="title-1">{{feature.publish_date}}</h4>
 									<h5 class="card-text">{{feature.title}}</h5>
 									<i>{{feature.author_first_name}} {{feature.author_last_name}}</i>
 								</div>
 							</div>
 						</div>
 					</div>
+				</a>
 					{% else %}
-					<div class="col-md-7 offset-md-3">
+					<a href="">
+					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
 								<img src="http://via.placeholder.com/100" class="img-thumbnail">
 							</div>
 							<div class="col-md-8 px-3">
 								<div class="card-block px-3">
-									<h2 class="title-1">{{feature.publish_date}}</h2>
+									<h4 class="title-1">{{feature.publish_date}}</h4>
 									<h5 class="card-text">{{feature.title}}</h5>
 									<i>{{feature.author_first_name}} {{feature.author_last_name}}</i>
 								</div>
 							</div>
 						</div>
 					</div>
+					</a>
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -114,38 +120,58 @@
 				<div class="carousel-item active">
 					<div class="row">
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 1"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 2"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 3"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 4"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 5"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="row">
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 6"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 7"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 8"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 9"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 						<div class="col">
-							<img class="img-fluid" src="/uploads/{{impact_block_image}}" alt="Image 10"/>
+							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+								test
+							</div>
 						</div>
 					</div>
 				</div>
@@ -162,7 +188,7 @@
 	</div>
 </div>
 <!-- MAP GOES HERE ON THIS DIV vvvvvvv -->
-<div class="vertical-center bg2">
+<div class="vertical-center">
 
 	<div class="vertical-center" id="map"></div>
 
@@ -379,10 +405,11 @@
 						]
 					}
 					];
+					var poly;
 
 					$(".map-overlay").hide();
 					var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
-
+					
 					map = new google.maps.Map(document.getElementById("map"), {
 						center: new google.maps.LatLng(
 							{% if start_location %}
@@ -391,12 +418,60 @@
 							40.75738,-73.990107
 							{% endif %}
 							),
-						zoom: 15,
+						zoom: 10,
 						disableDefaultUI: true
 					});
 
 					map.mapTypes.set('map_style', styledMap);
 					map.setMapTypeId('map_style');
+
+					$.getJSON( "https://data.cityofnewyork.us/resource/35e4-miqd.json", function( data ) {
+						var polygonArray = [];
+
+						var addListenersOnPolygon = function(polygon, id) {
+							google.maps.event.addListener(polygon, 'click', function (event) {
+								for (i in polygonArray) {
+									polygonArray[i].setOptions({strokeWeight: 1.0, fillColor: '#b5d76a'});
+								}
+								polygon.setOptions({strokeWeight: 2.0, fillColor: 'green'});
+								$( "#org-title" ).html( "District " + id);
+				        		$( "#org-des" ).html( "DATA GOES HERE" );
+				        		$(".map-overlay").show();
+							});  
+						}
+						
+						for(var q =0; q < data.length; q++){
+							var paths = [];
+							var district = 0;
+							var coords = data[q]["the_geom"].coordinates; 
+							for (var i = 0; i < coords.length; i++) { 
+								for (var j = 0; j < coords[i].length; j++) { 
+									var path = []; 
+									for (var k = 0; k < coords[i][j].length; k++) { 
+										var ll = new google.maps.LatLng(coords[i][j][k][1],coords[i][j][k][0]); 
+										path.push(ll); 
+									} 
+									district = data[q]["cong_dist"];
+									paths.push(path);
+								} 
+							} 
+							var polygon = new google.maps.Polygon({ 
+								paths: paths, 
+								strokeColor: "#4563ab", 
+								strokeOpacity: 1, 
+								strokeWeight: 1, 
+								fillColor: "#b5d76a", 
+								fillOpacity: 0.5 
+							}); 
+							polygonArray.push(polygon);
+							polygon.setMap(map);	
+							addListenersOnPolygon(polygon, district);			
+						}
+					});
+					//out of school
+					//out of work
+					//2017
+					//18-24
 
 					google.maps.event.addListenerOnce(map, 'tilesloaded', addMarkers);
 					$(".map-overlay").appendTo("#map");

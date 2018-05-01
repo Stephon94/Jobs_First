@@ -65,3 +65,23 @@ class Partner (models.Model):
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)
+
+class Affiliates (models.Model):
+
+    image = models.ImageField(upload_to='affiliates',default= 'sub_partners/No_person-1.jpg')
+    name = models.CharField(max_length=200)
+    text = models.TextField()
+    partner = models.ForeignKey(Partner, on_delete=models.CASCADE, null=True)
+    address = models.CharField(max_length=200, null=True, blank=True)
+    city = models.CharField(max_length=200, null=True, blank=True)
+    state = models.CharField(max_length=200, null=True, blank=True)
+    zipcode = models.CharField(max_length=200, null=True, blank=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name_plural = 'Affiliates'
+
+
+    def __str__(self):
+
+        return '{} :{}'.format(self.name, self.active)
