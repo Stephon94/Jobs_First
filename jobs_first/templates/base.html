@@ -51,9 +51,22 @@
 							<i class="fas fa-times"></i>
 						</button>
 					</div>
+					<script>
 				
-					<iframe src="https://jobsfirstnycorg.nationbuilder.com/" style="width: 100%; height:75vh;"></iframe>
-					
+						// $(".margintopmore").click(function(){
+						// 	alert("The paragraph was clicked.");
+						// });
+						function iframeclick(){
+							
+							$("#nationBuilder").contents().find(".margintopmore").click(function() {
+								alert( "Handler for .click() called." );
+							});
+							alert("loaded");
+						}
+
+					</script>
+				
+					<iframe src="https://jobsfirstnycorg.nationbuilder.com/" id="nationBuilder" onload="iframeclick()" style="width: 100%; height:75vh;"></iframe>
 				</div>
 			</div>
 		</div>
