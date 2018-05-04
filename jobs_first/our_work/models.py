@@ -68,7 +68,7 @@ class Partner (models.Model):
 
 class Affiliates (models.Model):
 
-    image = models.ImageField(upload_to='affiliates',default= 'sub_partners/No_person-1.jpg')
+    image = models.ImageField(upload_to='affiliates',default= 'affiliates/No_person-1.jpg')
     name = models.CharField(max_length=200)
     text = models.TextField()
     partner = models.ForeignKey(Partner, on_delete=models.CASCADE, null=True)

@@ -119,63 +119,18 @@
 			<div class="carousel-inner" style="width: 80%">
 				<div class="carousel-item active">
 					<div class="row">
+						{% for affiliate in affiliates %}
+						{% if affiliate.image %}
 						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
+							<div style="background:url(/uploads/{{affiliate.image}})">
 								test
 							</div>
 						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
+						{% endif %}
+						{% endfor %}
 					</div>
 				</div>
-				<div class="carousel-item">
-					<div class="row">
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-						<div class="col">
-							<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)">
-								test
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			</div>	
 		</center>
 		<a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>

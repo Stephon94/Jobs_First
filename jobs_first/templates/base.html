@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,40 +128,47 @@
 				</div>
 				<div class="col-md-4">
 					<h2 class="text-white text-center">Contact Us</h2>
-					<form>
+					<form action="{% url 'email' %}" method="post">
+						{% csrf_token %}
 						<div class="form-group row">
 							<label for="inputName" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Name</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="inputName" placeholder="Your Name">
+								<input type="text" name="name" class="form-control" id="inputName" placeholder="Your Name">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputTitle" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Title</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="inputTitle" placeholder="Your Title">
+								<input type="text" name="title" class="form-control" id="inputTitle" placeholder="Your Title">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputOrg" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Org</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="inputOrg" placeholder="Your Org">
+								<input type="text" name="org" class="form-control" id="inputOrg" placeholder="Your Org">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputEmail" class="col-sm-2 offset-sm-2 col-form-label text-white">Your Email</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="inputEmail" placeholder="Your Email">
+								<input type="text" name="email" ="form-control" id="inputEmail" placeholder="Your Email">
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputSubject" class="col-sm-2 offset-sm-2 col-form-label text-white">Subject</label>
 							<div class="col-sm-8">
-								<textarea type="text" class="form-control" id="inputSubject" placeholder=""></textarea>
+								<textarea type="text" name="subject" class="form-control" id="inputSubject" placeholder=""></textarea>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputMessage" class="col-sm-2 offset-sm-2 col-form-label text-white">Message</label>
+							<div class="col-sm-8">
+								<textarea type="text" name="message" class="form-control" id="inputMessage" placeholder=""></textarea>
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="offset-md-4 col-sm-8">
-								<button class="btn w-100 green-btn text-white"><h4>Send</h4></button>
+								<button class="btn w-100 green-btn text-white"type="submit"><h4>Send</h4></button>
 							</div>
 						</div>
 					</form>

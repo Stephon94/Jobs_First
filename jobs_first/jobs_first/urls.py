@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+import views
 
 urlpatterns = [
     url(r'^', include('home_page.urls')),
@@ -23,4 +24,5 @@ urlpatterns = [
     url(r'^publications/', include('publications.urls')),
     url(r'^media/', include('media.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^email/', views.send_email, name='email'),
 ]

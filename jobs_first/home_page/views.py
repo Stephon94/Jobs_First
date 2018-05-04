@@ -20,12 +20,11 @@ def index(request):
     solutions = Solution.objects.all()
     impact_block = Impact_Section.objects.get()
     featured = [article for article in News.objects.all() if (article.is_news == False and article.external_link != "") and article.publish == True]
-
+    affiliates = Affiliates.objects.all()
     partners = Partner.objects.all()
     location_coordinates = []
 
     for partner in partners:
-        print vars(partner)
         if partner.address is not None:
             location_coordinates.append(partner.get_coordinates())
 
@@ -40,6 +39,7 @@ def index(request):
 
 
     context_dict['banners'] = banners
+    context_dict['affiliates'] = affiliates
     context_dict['featured'] = featured
     context_dict['solutions'] = solutions
     context_dict['problem_block_title'] = problem_block.title
