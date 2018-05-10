@@ -71,7 +71,6 @@ class Affiliates (models.Model):
     image = models.ImageField(upload_to='affiliates',default= 'affiliates/No_person-1.jpg')
     name = models.CharField(max_length=200)
     text = models.TextField()
-    partner = models.ForeignKey(Partner, on_delete=models.CASCADE, null=True)
     address = models.CharField(max_length=200, null=True, blank=True)
     city = models.CharField(max_length=200, null=True, blank=True)
     state = models.CharField(max_length=200, null=True, blank=True)
@@ -85,3 +84,38 @@ class Affiliates (models.Model):
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)
+
+
+class Section (models.Model):
+
+    title = models.CharField(max_length=256, null=False)
+    sub_title = models.CharField(max_length=256, null=True, blank=True)
+    text = models.TextField(null=False)
+
+    class Meta:
+        verbose_name_plural = 'Sections'
+
+    def __str__(self):
+
+       return '{}'.format(self.title)
+
+class Sub_Section (models.Model):
+
+    title = models.CharField(max_length=256, null=False)
+    image = models.ImageField(upload_to='Sub Section Logo', null=True, blank=True)
+    text = models.TextField(null=False)
+    section = models.ForeignKey(
+        Section,
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        verbose_name_plural = 'Our Work Sub Sections'
+
+    def __str__(self):
+
+        return '{}'.format(self.title)
+
+
+
+

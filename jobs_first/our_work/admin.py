@@ -9,6 +9,8 @@ admin.site.register(Banner)
 admin.site.register(Partnership_Type)
 admin.site.register(Partner)
 admin.site.register(Affiliates)
+admin.site.register(Section)
+admin.site.register(Sub_Section)
 
 
 # Register your models here.

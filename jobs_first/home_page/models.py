@@ -63,6 +63,20 @@ class Impact_Section(models.Model):
 
         return self.title
 
+
+class Impact_Caraousel_Image(models.Model):
+
+    title = models.CharField(max_length=256)
+    image = models.ImageField(upload_to='impact_caraousel',default= 'impact_banner/no-banner-img.jpg')
+
+    class Meta:
+        verbose_name_plural = 'Home Page Impact Section'
+
+    def __str__(self):
+
+        return self.title
+
+
 class Impact_Section_Image(models.Model):
 
     image = models.ImageField(null=True)
