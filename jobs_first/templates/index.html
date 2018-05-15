@@ -16,11 +16,15 @@
 	</ol>
 	<div class="carousel-inner">
 		{% for banner in banners %}
-		<div class="carousel-item active">
-			<div class="carousel-content bg-header" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;" alt="First slide">
-				<h1 class="text-white text-center">{{banner.text}}</h1>
-			</div>
-		</div>
+			{% if forloop.counter == 1 %}
+				<div class="carousel-item active">
+			{% else %}
+				<div class="carousel-item">
+			{% endif %}
+					<div class="carousel-content bg-header" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;" alt="First slide">
+						<h1 class="text-white text-center">{{banner.text}}</h1>
+					</div>
+				</div>
 		{% endfor %}
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -124,6 +128,38 @@
 						<div class="col">
 							<a href="/our-work?id=tab{{forloop.counter}}" class="text-white">
 								<div style="background:url(/uploads/{{affiliate.image}}) no-repeat center center; min-height:85px;" class="vertical-text">
+<!-- =======
+							<a href="/our-work?id=tab1" class="text-white">
+								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
+									test
+								</div>
+							</a>
+						</div>
+						<div class="col">
+							<a href="/our-work?id=tab2" class="text-white">
+								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
+									test
+								</div>
+							</a>
+						</div>
+						<div class="col">
+							<a href="/our-work?id=tab3" class="text-white">
+								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
+									test
+								</div>
+							</a>
+						</div>
+						<div class="col">
+							<a href="/our-work?id=tab4" class="text-white">
+								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
+									test
+								</div>
+							</a>
+						</div>
+						<div class="col">
+							<a href="/our-work?id=tab5" class="text-white">
+								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
+>>>>>>> 29f9e0066878d99fcefc1b962f21e90265b009c8 -->
 									test
 								</div>
 							</a>
@@ -374,7 +410,7 @@
 					map.mapTypes.set('map_style', styledMap);
 					map.setMapTypeId('map_style');
 
-					$.getJSON( "https://data.cityofnewyork.us/resource/35e4-miqd.json", function( data ) {
+					$.getJSON( "https://data.cityofnewyork.us/resource/ith2-q832.json", function( data ) {
 						var polygonArray = [];
 
 						var addListenersOnPolygon = function(polygon, id) {
@@ -400,7 +436,7 @@
 										var ll = new google.maps.LatLng(coords[i][j][k][1],coords[i][j][k][0]); 
 										path.push(ll); 
 									} 
-									district = data[q]["cong_dist"];
+									district = data[q]["puma"];
 									paths.push(path);
 								} 
 							} 

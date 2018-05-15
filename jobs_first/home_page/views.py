@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 import random
-from models import *
+import models as home
 from our_work.models import *
 from media.models import *
 from our_work.models import *
@@ -14,11 +14,11 @@ def index(request):
 
 # Querying everything the Home Page needs
     context_dict = {}
-    banners = Banner.objects.all()
-    problem_block = Problem_Section.objects.get(id=1)
-    solution_block = Solution_Section.objects.get(id=1)
-    solutions = Solution.objects.all()
-    impact_block = Impact_Section.objects.get()
+    banners = home.Banner.objects.all()
+    problem_block = home.Problem_Section.objects.get(id=1)
+    solution_block = home.Solution_Section.objects.get(id=1)
+    solutions = home.Solution.objects.all()
+    impact_block = home.Impact_Section.objects.get()
     featured = [article for article in News.objects.all() if (article.is_news == False and article.external_link != "") and article.publish == True]
     affiliates = Affiliates.objects.all()
     partners = Partner.objects.all()
