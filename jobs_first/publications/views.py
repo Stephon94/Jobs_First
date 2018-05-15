@@ -5,6 +5,7 @@ from django.shortcuts import render
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
+from forms import EmailForm
 
 def publications_page(request):
 
@@ -21,6 +22,7 @@ def publications_page(request):
     featured = [article for article in Article.objects.all() if article.is_featured == True]
 
     context_dict['banner'] = banner
+    context_dict['form'] = EmailForm()
     context_dict['articles'] = articles
     context_dict['featured'] = featured
 

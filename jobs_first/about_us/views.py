@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
+from forms import EmailForm
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
@@ -18,6 +18,7 @@ def about_us_page(request):
     supporters = Supporter.objects.all()
 
     context_dict['banner'] = banner
+    context_dict['form'] = EmailForm()
     context_dict['history_block_title'] = history_block.title
     context_dict['history_block_text'] = history_block.text
     context_dict['staff_members'] = staff_members

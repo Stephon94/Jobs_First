@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 import random
 import models as home
+from forms import EmailForm
 from our_work.models import *
 from media.models import *
 from our_work.models import *
@@ -35,10 +36,12 @@ def index(request):
             location_coordinates = location_coordinates[len(location_coordinates)/2:]
             context_dict['locations'] = location_coordinates
 
-    
+    if request.POST:
+        print request.POST
 
 
     context_dict['banners'] = banners
+    context_dict['form'] = EmailForm()
     context_dict['affiliates'] = affiliates
     context_dict['featured'] = featured
     context_dict['solutions'] = solutions

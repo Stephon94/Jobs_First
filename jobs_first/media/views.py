@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
+from forms import EmailForm
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
@@ -16,6 +16,7 @@ def news_page(request):
 
     print featured
     context_dict['banner'] = banner
+    context_dict['form'] = EmailForm()
     context_dict['blog_posts'] = blog_posts
     context_dict['in_press'] = in_press
     context_dict['featured'] = featured
