@@ -46,6 +46,11 @@ def our_work_page(request):
 
 
     #context_dict['sections'] = sections
+    context_dict['place_based'] = place_based
+    context_dict['sector_based'] = sector_based
+    context_dict['in_school_based'] = in_school_based
+    context_dict['emp_engagement'] = emp_engagement
+    context_dict['policy'] = policy
     context_dict['form'] = EmailForm()
     context_dict['sub_sections'] = sub_sections
     context_dict['banner'] = banner
