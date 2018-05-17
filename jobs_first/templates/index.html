@@ -9,10 +9,14 @@
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
-		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		{% for banner in banners %}
+			{% if forloop.counter == 1 %}
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			{% else %}
+				<li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+			{% endif %}
+		{% endfor %}
+			
 	</ol>
 	<div class="carousel-inner">
 		{% for banner in banners %}
@@ -518,6 +522,9 @@
 				<p>18-24 OSOW rate (2013-15)</p>
 				<p class="text-secondary" id="circle2-num">1000</p> 
 			</div> 
+			<center>
+				<button class="btn green-btn text-white" id="close" onclick='$(".map-overlay").hide();'>Close</button>
+			</center>
 		</div>
 	</div>
 </div>
