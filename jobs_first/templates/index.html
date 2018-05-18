@@ -79,7 +79,7 @@
 					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
-								<img src="/uploads/{{feature.image}}" class="img-thumbnail">
+								<img src="/uploads/{{feature.image}}" class="img-thumbnail w-100">
 							</div>
 							<div class="col-md-8 px-3">
 								<div class="card-block px-3">
@@ -96,7 +96,7 @@
 					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
-								<img src="http://via.placeholder.com/100" class="img-thumbnail">
+								<img src="http://via.placeholder.com/100" class="img-thumbnail w-100">
 							</div>
 							<div class="col-md-8 px-3">
 								<div class="card-block px-3">
@@ -129,7 +129,7 @@
 					<div class="row">
 						{% for affiliate in affiliates %}
 						{% if affiliate.image %}
-						<div class="col">
+						<div class="col-md-2 mx-auto">
 							<a href="/our-work?id=tab{{forloop.counter}}" class="text-white">
 								<div style="background:url(/uploads/{{affiliate.image}}) no-repeat center center; min-height:85px;" class="vertical-text">
 <!-- =======
