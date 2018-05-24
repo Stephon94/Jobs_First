@@ -9,3 +9,4 @@ admin.site.register(Problem_Section)
 admin.site.register(Solution_Section)
 admin.site.register(Solution)
 admin.site.register(Impact_Section)
+

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from autoslug import AutoSlugField
 from django.db import models
 
 class Banner (models.Model):
@@ -24,7 +24,8 @@ class Article(models.Model):
     author_first_name = models.CharField(max_length=200)
     author_last_name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='Article', blank=True ,null='True')
-
+    pdf = models.FileField(upload_to='Article/pdf', blank=True ,null='True')
+    slug = AutoSlugField(populate_from='title')
 
     class Meta:
         verbose_name_plural = 'Articles'

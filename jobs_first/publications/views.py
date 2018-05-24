@@ -6,6 +6,8 @@ from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from forms import EmailForm
+import os
+from wsgiref.util import FileWrapper
 
 def publications_page(request):
 
@@ -27,3 +29,22 @@ def publications_page(request):
     context_dict['featured'] = featured
 
     return render(request,'publications.html', context_dict)
+
+def publications_article(request, slug):
+
+    context_dict = {}
+    article = Article.objects.get(slug=slug)
+    context_dict['article'] = article
+    context_dict['switch'] = -1
+
+    return render(request,'article.html', context_dict)
+
+def pdf_download(request, filename):
+    path = os.path.expanduser('~\\Desktop\\projects2018\\Job1st\\Jobs_First\\jobs_first\\uploads\\Article\\pdf\\')
+    print path
+    from wsgiref.util import FileWrapper
+    f = open(path+filename, "r")
+    response = HttpResponse(FileWrapper(f), content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename={}.pdf'.format("".join(filename.split('.')[0]))
+    f.close()
+    return response
