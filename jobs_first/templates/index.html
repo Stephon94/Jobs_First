@@ -75,7 +75,7 @@
 			</div>
 			{% for feature in featured %}
 				{% if image %}
-				<a href="">
+				<a href="{{feature.external_link}}">
 					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
@@ -92,7 +92,7 @@
 					</div>
 				</a>
 					{% else %}
-					<a href="">
+					<a href="{{feature.external_link}}">
 					<div class="col-md-12">
 						<div class="row ">
 							<div class="col-md-4">
@@ -522,9 +522,9 @@
 				<p>18-24 OSOW rate (2013-15)</p>
 				<p class="text-secondary" id="circle2-num">1000</p> 
 			</div> 
-			<center>
+			<div class="col-md-12">
 				<button class="btn green-btn text-white" id="close" onclick='$(".map-overlay").hide();'>Close</button>
-			</center>
+			</div>
 		</div>
 	</div>
 </div>
