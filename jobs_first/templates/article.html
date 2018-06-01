@@ -6,7 +6,7 @@
 
 
 		<div class="header-img" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;">
-			<h1 class="text-white text-center">{{article.title}}</h1>
+			<h1 class="text-center">{{article.title}}</h1>
 		</div>
 
 		<div class="container">
@@ -20,7 +20,7 @@
 				<i class="fas fa-arrow-alt-circle-left fa-6x"></i></a>
 
 			{% if switch %}
-				<a href="/{{article.pdf}}"><i class="fas fa-download-alt-circle-left fa-6x"></i></a>
+				<a href="https://jobsfirst-assets.s3.amazonaws.com/media/{{article.pdf}}"><i class="fas fa-download-alt-circle-left fa-6x"></i></a>
 			{% endif %}
 			<p class="float-right">{{article.publish_date}}</p>
 			<br>
