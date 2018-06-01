@@ -1,0 +1,442 @@
+[
+  {
+    "Neighborhood": "Mott Haven / Hunts Point (Bx)",
+    "18-24 OSOW rate (2013-15)": "37%",
+    "Number of OSOW 18%u201324s (2013-15)": "7,687",
+    "18-24 OSOW rate (2008-10)": "43%",
+    "Number of OSOW 18%u201324s (2008-10)": "8,238",
+    "code": 3710
+  },
+  {
+    "Neighborhood": "Bedford Stuyvesant (Bk)",
+    "18-24 OSOW rate (2013-15)": "29%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,588",
+    "18-24 OSOW rate (2008-10)": "29%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,250",
+    "code": 4003
+  },
+  {
+    "Neighborhood": "Brownsville / Ocean Hill (Bk)",
+    "18-24 OSOW rate (2013-15)": "29%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,912",
+    "18-24 OSOW rate (2008-10)": "37%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,834",
+    "code": 4007
+  },
+  {
+    "Neighborhood": "East Flatbush (Bk)",
+    "18-24 OSOW rate (2013-15)": "29%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,853",
+    "18-24 OSOW rate (2008-10)": "22%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,304",
+    "code": 4010
+  },
+  {
+    "Neighborhood": "Soundview / Parkchester (Bx)",
+    "18-24 OSOW rate (2013-15)": "29%",
+    "Number of OSOW 18%u201324s (2013-15)": "6,037",
+    "18-24 OSOW rate (2008-10)": "31%",
+    "Number of OSOW 18%u201324s (2008-10)": "5,860",
+    "code": 3709
+  },
+  {
+    "Neighborhood": "Central Harlem (M)",
+    "18-24 OSOW rate (2013-15)": "27%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,051",
+    "18-24 OSOW rate (2008-10)": "27%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,484",
+    "code": 3803
+  },
+  {
+    "Neighborhood": "Morrisania / East Tremont (Bx)",
+    "18-24 OSOW rate (2013-15)": "26%",
+    "Number of OSOW 18%u201324s (2013-15)": "6,188",
+    "18-24 OSOW rate (2008-10)": "29%",
+    "Number of OSOW 18%u201324s (2008-10)": "6,418",
+    "code": 3705
+  },
+  {
+    "Neighborhood": "Kingsbridge Heights / Mosholu (Bx)",
+    "18-24 OSOW rate (2013-15)": "26%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,679",
+    "18-24 OSOW rate (2008-10)": "27%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,753",
+    "code": 3701
+  },
+  {
+    "Neighborhood": "Highbridge / S. Concourse (Bx)",
+    "18-24 OSOW rate (2013-15)": "26%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,557",
+    "18-24 OSOW rate (2008-10)": "23%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,419",
+    "code": 3708
+  },
+  {
+    "Neighborhood": "East New York / Starrett City (Bx)",
+    "18-24 OSOW rate (2013-15)": "25%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,654",
+    "18-24 OSOW rate (2008-10)": "31%",
+    "Number of OSOW 18%u201324s (2008-10)": "5,643",
+    "code": 4008
+  },
+  {
+    "Neighborhood": "North Crown Heights / Prospect Heights (Bk)",
+    "18-24 OSOW rate (2013-15)": "25%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,411",
+    "18-24 OSOW rate (2008-10)": "27%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,821",
+    "code": 4006
+  },
+  {
+    "Neighborhood": "North Shore (SI)",
+    "18-24 OSOW rate (2013-15)": "24%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,495",
+    "18-24 OSOW rate (2008-10)": "19%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,834",
+    "code": 3903
+  },
+  {
+    "Neighborhood": "University Heights / Fordham (Bx)",
+    "18-24 OSOW rate (2013-15)": "23%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,141",
+    "18-24 OSOW rate (2008-10)": "33%",
+    "Number of OSOW 18%u201324s (2008-10)": "6,314",
+    "code": 3706
+  },
+  {
+    "Neighborhood": "Flatbush (Bk)",
+    "18-24 OSOW rate (2013-15)": "22%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,636",
+    "18-24 OSOW rate (2008-10)": "21%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,048",
+    "code": 4015
+  },
+  {
+    "Neighborhood": "Jamaica (Q)",
+    "18-24 OSOW rate (2013-15)": "21%",
+    "Number of OSOW 18%u201324s (2013-15)": "5,425",
+    "18-24 OSOW rate (2008-10)": "23%",
+    "Number of OSOW 18%u201324s (2008-10)": "5,410",
+    "code": 4112
+  },
+  {
+    "Neighborhood": "Washington Heights / Inwood (M)",
+    "18-24 OSOW rate (2013-15)": "21%",
+    "Number of OSOW 18%u201324s (2013-15)": "4,913",
+    "18-24 OSOW rate (2008-10)": "20%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,439",
+    "code": 3801
+  },
+  {
+    "Neighborhood": "South Crown Heights (Bk)",
+    "18-24 OSOW rate (2013-15)": "20%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,243",
+    "18-24 OSOW rate (2008-10)": "22%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,915",
+    "code": 4011
+  },
+  {
+    "Neighborhood": "Rockaways (Q)",
+    "18-24 OSOW rate (2013-15)": "19%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,841",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,997",
+    "code": 4114
+  },
+  {
+    "Neighborhood": "Elmhurst / Corona (Q)",
+    "18-24 OSOW rate (2013-15)": "19%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,593",
+    "18-24 OSOW rate (2008-10)": "18%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,688",
+    "code": 4107
+  },
+  {
+    "Neighborhood": "Williamsbridge / Baychester (Bx)",
+    "18-24 OSOW rate (2013-15)": "19%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,799",
+    "18-24 OSOW rate (2008-10)": "27%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,501",
+    "code": 3702
+  },
+  {
+    "Neighborhood": "Flatlands / Canarsie (Bk)",
+    "18-24 OSOW rate (2013-15)": "18%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,865",
+    "18-24 OSOW rate (2008-10)": "15%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,312",
+    "code": 4009
+  },
+  {
+    "Neighborhood": "Pelham Parkway (Bx)",
+    "18-24 OSOW rate (2013-15)": "18%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,157",
+    "18-24 OSOW rate (2008-10)": "27%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,271",
+    "code": 3704
+  },
+  {
+    "Neighborhood": "Middle Village / Ridgewood (Q)",
+    "18-24 OSOW rate (2013-15)": "18%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,770",
+    "18-24 OSOW rate (2008-10)": "20%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,213",
+    "code": 4110
+  },
+  {
+    "Neighborhood": "Sheepshead Bay / Gravesend (Bk)",
+    "18-24 OSOW rate (2013-15)": "18%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,129",
+    "18-24 OSOW rate (2008-10)": "18%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,992",
+    "code": 4016
+  },
+  {
+    "Neighborhood": "Howard Beach / S. Ozone Park (Q)",
+    "18-24 OSOW rate (2013-15)": "18%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,198",
+    "18-24 OSOW rate (2008-10)": "19%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,706",
+    "code": 4113
+  },
+  {
+    "Neighborhood": "Brooklyn Heights / Fort Greene (Bk)",
+    "18-24 OSOW rate (2013-15)": "17%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,125",
+    "18-24 OSOW rate (2008-10)": "19%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,515",
+    "code": 4004
+  },
+  {
+    "Neighborhood": "Sunset Park (Bk)",
+    "18-24 OSOW rate (2013-15)": "17%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,340",
+    "18-24 OSOW rate (2008-10)": "24%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,419",
+    "code": 4012
+  },
+  {
+    "Neighborhood": "Bushwick (Bk)",
+    "18-24 OSOW rate (2013-15)": "17%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,999",
+    "18-24 OSOW rate (2008-10)": "26%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,658",
+    "code": 4002
+  },
+  {
+    "Neighborhood": "Jackson Heights (Q)",
+    "18-24 OSOW rate (2013-15)": "16%",
+    "Number of OSOW 18%u201324s (2013-15)": "3,087",
+    "18-24 OSOW rate (2008-10)": "19%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,712",
+    "code": 4102
+  },
+  {
+    "Neighborhood": "Borough Park (Bk)",
+    "18-24 OSOW rate (2013-15)": "16%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,491",
+    "18-24 OSOW rate (2008-10)": "20%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,223",
+    "code": 4014
+  },
+  {
+    "Neighborhood": "Park Slope / Carroll Gardens (Bk)",
+    "18-24 OSOW rate (2013-15)": "16%",
+    "Number of OSOW 18%u201324s (2013-15)": 973,
+    "18-24 OSOW rate (2008-10)": "16%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,261",
+    "code": 4005
+  },
+  {
+    "Neighborhood": "South Shore (SI)",
+    "18-24 OSOW rate (2013-15)": "16%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,201",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,284",
+    "code": 3901
+  },
+  {
+    "Neighborhood": "Astoria (Q)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,404",
+    "18-24 OSOW rate (2008-10)": "13%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,087",
+    "code": 4101
+  },
+  {
+    "Neighborhood": "Bellerose / Rosedale (Q)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,881",
+    "18-24 OSOW rate (2008-10)": "15%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,920",
+    "code": 4105
+  },
+  {
+    "Neighborhood": "East Harlem (M)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,939",
+    "18-24 OSOW rate (2008-10)": "32%",
+    "Number of OSOW 18%u201324s (2008-10)": "4,631",
+    "code": 3804
+  },
+  {
+    "Neighborhood": "Sunnyside / Woodside (Q)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,433",
+    "18-24 OSOW rate (2008-10)": "11%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,063",
+    "code": 4109
+  },
+  {
+    "Neighborhood": "Kew Gardens / Woodhaven (Q)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,500",
+    "18-24 OSOW rate (2008-10)": "22%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,126",
+    "code": 4111
+  },
+  {
+    "Neighborhood": "Bay Ridge (Bk)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,334",
+    "18-24 OSOW rate (2008-10)": "18%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,744",
+    "code": 4013
+  },
+  {
+    "Neighborhood": "Forest Hills / Rego Park (Q)",
+    "18-24 OSOW rate (2013-15)": "15%",
+    "Number of OSOW 18%u201324s (2013-15)": 880,
+    "18-24 OSOW rate (2008-10)": "10%",
+    "Number of OSOW 18%u201324s (2008-10)": 720,
+    "code": 4108
+  },
+  {
+    "Neighborhood": "Williamsburg / Greenpoint (Bk)",
+    "18-24 OSOW rate (2013-15)": "14%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,004",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,790",
+    "code": 4001
+  },
+  {
+    "Neighborhood": "Throgs Neck / Co-op City (Bx)",
+    "18-24 OSOW rate (2013-15)": "14%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,579",
+    "18-24 OSOW rate (2008-10)": "19%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,731",
+    "code": 3703
+  },
+  {
+    "Neighborhood": "Riverdale / Kingsbridge (Bk)",
+    "18-24 OSOW rate (2013-15)": "13%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,453",
+    "18-24 OSOW rate (2008-10)": "11%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,568",
+    "code": 3701
+  },
+  {
+    "Neighborhood": "Coney Island (Bk)",
+    "18-24 OSOW rate (2013-15)": "13%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,167",
+    "18-24 OSOW rate (2008-10)": "18%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,515",
+    "code": 4018
+  },
+  {
+    "Neighborhood": "Flushing / Whitestone (Q)",
+    "18-24 OSOW rate (2013-15)": "13%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,566",
+    "18-24 OSOW rate (2008-10)": "14%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,058",
+    "code": 4103
+  },
+  {
+    "Neighborhood": "Bensonhurst (Bk)",
+    "18-24 OSOW rate (2013-15)": "12%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,719",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,013",
+    "code": 4017
+  },
+  {
+    "Neighborhood": "Hillcrest / Fresh Meadows (Q)",
+    "18-24 OSOW rate (2013-15)": "12%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,964",
+    "18-24 OSOW rate (2008-10)": "11%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,459",
+    "code": 4106
+  },
+  {
+    "Neighborhood": "Lower East Side / Chinatown (M)",
+    "18-24 OSOW rate (2013-15)": "11%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,905",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "2,965",
+    "code": 3809
+  },
+  {
+    "Neighborhood": "Morningside Heights / Hamilton Heights (M)",
+    "18-24 OSOW rate (2013-15)": "11%",
+    "Number of OSOW 18%u201324s (2013-15)": "2,480",
+    "18-24 OSOW rate (2008-10)": "16%",
+    "Number of OSOW 18%u201324s (2008-10)": "3,499",
+    "code": 3802
+  },
+  {
+    "Neighborhood": "Upper West Side (M)",
+    "18-24 OSOW rate (2013-15)": "11%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,046",
+    "18-24 OSOW rate (2008-10)": "10%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,119",
+    "code": 3806
+  },
+  {
+    "Neighborhood": "Mid-Island (SI)",
+    "18-24 OSOW rate (2013-15)": "10%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,170",
+    "18-24 OSOW rate (2008-10)": "17%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,985",
+    "code": 3902
+  },
+  {
+    "Neighborhood": "Chelsea / Clinton / Midtown (M)",
+    "18-24 OSOW rate (2013-15)": "7%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,053",
+    "18-24 OSOW rate (2008-10)": "7%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,049",
+    "code": 3807
+  },
+  {
+    "Neighborhood": "Bayside / Little Neck (Q)",
+    "18-24 OSOW rate (2013-15)": "7%",
+    "Number of OSOW 18%u201324s (2013-15)": 554,
+    "18-24 OSOW rate (2008-10)": "11%",
+    "Number of OSOW 18%u201324s (2008-10)": 887,
+    "code": 4104
+  },
+  {
+    "Neighborhood": "Stuyvesant Town / Turtle Bay (M)",
+    "18-24 OSOW rate (2013-15)": "7%",
+    "Number of OSOW 18%u201324s (2013-15)": "1,154",
+    "18-24 OSOW rate (2008-10)": "3%",
+    "Number of OSOW 18%u201324s (2008-10)": 443,
+    "code": 3808
+  },
+  {
+    "Neighborhood": "Greenwich Village / Financial District (M)",
+    "18-24 OSOW rate (2013-15)": "7%",
+    "Number of OSOW 18%u201324s (2013-15)": 969,
+    "18-24 OSOW rate (2008-10)": "4%",
+    "Number of OSOW 18%u201324s (2008-10)": 567,
+    "code": 3810
+  },
+  {
+    "Neighborhood": "Upper East Side (M)",
+    "18-24 OSOW rate (2013-15)": "6%",
+    "Number of OSOW 18%u201324s (2013-15)": 572,
+    "18-24 OSOW rate (2008-10)": "15%",
+    "Number of OSOW 18%u201324s (2008-10)": "1,592",
+    "code": 3805
+  }
+]

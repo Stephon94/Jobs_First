@@ -1,0 +1,223 @@
+	.vertical-center {
+		min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+		min-height: 100vh;
+	}
+	.nav-item{
+		padding-right: 50px;
+		padding-left: 50px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.navbar,.navbar-brand{
+		padding: 0px;
+	}
+
+	.join{
+		background-color: #4563ab;
+		color:white;
+	}
+	.navbar-light .navbar-nav .nav-link {
+		color: black;
+	}
+
+	.carousel-indicators .active {
+		background-color: #4563ab;
+		border: 2px solid #56e293;
+	}
+
+	.carousel-indicators li {
+		width: 20px;
+		height: 20px;
+		background-color: rgb(69, 99, 171);
+		border-radius: 50%;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	.container-fluid{
+		padding: 50px;
+	}
+	hr{
+		background-color:#b5d76a; 
+		height: 2px; 
+		border: 0;
+		width: 175px
+	}
+	.title-1{
+		color:#4563ab;
+	}
+	.title-2{
+		color:white;
+	}
+	.bg1{
+		background: url(https://images.pexels.com/photos/125532/pexels-photo-125532.jpeg)no-repeat center center;
+	}
+	.bg2{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+	.nav-item-footer{
+		padding-top: 0px;
+		padding-bottom: 0px;
+		color:white;
+	}
+	.nav-item-footer > a{
+		color:white;
+	}
+
+	.vertical-text {
+		min-height: 25%;  /* Fallback for browsers do NOT support vh unit */
+		min-height: 25vh;  /* Fallback for browsers do NOT support vh unit */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.vertical-form {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		background-color: #4563ab;
+	}
+
+	.vertical-text > .row{
+		width: 100%;
+	}
+	.fa-2x {
+		font-size: 2.5em;
+		color:#b5d76a;
+	}
+	.fa-6x{
+		color:#b5d76a;
+	}
+	.fa-inverse {
+		color: #4563ab;
+	}
+	.footer{
+		background-color: #4563ab;
+	}
+	.bg-blue{
+		background-color: #4563ab;
+	}
+	.form-control{
+		border-style: solid;
+		border-width: 0px 0px 4px 0px;
+		border-color: #b5d76a;
+	}
+	.map-overlay{
+		background-color: white; 
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+		border: 1px solid #4563ab;
+	}
+	.map-overlay{
+		padding:50px;
+	}
+	.list-bullet{
+		color:white;
+	}
+	.list-bullet > li > p{
+		color:black;
+	}
+	.fa-circle{
+		color:#b5d76a;
+	}
+
+	.header-img {
+		min-height: 65%;  /* Fallback for browsers do NOT support vh unit */
+		min-height: 65vh;  /* Fallback for browsers do NOT support vh unit */
+		border-style: solid;
+		border-width: 10px 0px 10px 0px;
+		border-color: #b5d76a;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.carousel-item > .carousel-content{
+		min-height: 65%;  /* Fallback for browsers do NOT support vh unit */
+		min-height: 65vh;  /* Fallback for browsers do NOT support vh unit */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.work-header{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+
+	.publications-header{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+
+	.media-header{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+
+	.article-header{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+
+	.about-header{
+		background: url(https://images.pexels.com/photos/269801/pexels-photo-269801.jpeg)no-repeat center center;
+	}
+	.user-img{
+		padding: 15px;
+	}
+
+	.text-jfblue{
+		color: #4563ab;
+	}
+
+	.work-taps{
+		padding-top: 25px;
+		padding-bottom: 25px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.work-taps > b{
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    color: #4563ab;
+	}
+
+	.nav-tabs .nav-link.active{
+		color: #ffffff;
+	    background-color: #4563ab;
+	    border-radius: 10px;
+	}
+
+	.nav-link {
+		display: inline;
+		padding: .5rem 1rem;
+	}
+
+	.tab-content , .tab-content > #home {
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.dash{
+		color: #4563ab;
+		font-size: 1.25em;
+	}
+
+	.green-btn{
+		padding-right: 50px;
+		padding-left: 50px;
+		background-color: #b5d76a;
+	}
+
+	.copyright{
+		background-color: #494949;
+	}
+
+	.copyright > p{
+		padding: 10px;
+		color: white;
+	}
+
+	.modal-header{
+		border-bottom: 0px solid #e9ecef;
+	}

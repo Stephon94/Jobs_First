@@ -8,4 +8,4 @@ urlpatterns = [
     url(r'^(?P<slug>[-\w]+)/$', views.selected_post, name='selected_post' )
 ]
 urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
