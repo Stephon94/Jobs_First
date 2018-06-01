@@ -10,7 +10,7 @@
 
 		<div class="row vertical-form">
 			<div class="col-md-12">
-				<form action="/publications/" method="post">
+				<form action="/publication/" method="post">
 					{% csrf_token %}
 					<div class="row">
 						<div class="col text-center">
@@ -23,9 +23,7 @@
 							<div class="form-group">
 								<select class="form-control">
 									<option>All</option>
-									<option>Test</option>
-									<option>Test</option>
-									<option>Test</option>
+									<option>Featured</option>
 								</select>
 							</div>
 						</div>
@@ -59,9 +57,11 @@
 						{% for article in results %}
 						<div class="row">
 							<div class="col-xs-12">
-								<h4><i class="fas fa-minus fa-2x dash"></i> {{article.title}}</h4>
-								<p>{{article.text|truncatechars:150}}</p>
-								<h6>{{article.author_first_name}} {{article.author_last_name}}</h6>
+								<a href="/publication/{{article.slug}}">
+									<h4><i class="fas fa-minus fa-2x dash"></i> {{article.title}}</h4>
+									<p>{{article.text|truncatechars:150}}</p>
+									<h6>{{article.author_first_name}} {{article.author_last_name}}</h6>
+								</a>
 							</div>
 						</div>
 						{% endfor %}
@@ -74,7 +74,7 @@
 						{% for article in articles %}
 						<div class="row">
 							<div class="col-xs-12">
-								<a href="#">
+								<a href="/publication/{{article.slug}}">
 									<h4><i class="fas fa-minus fa-2x dash"></i> {{article.title}}</h4>
 									<p class="text-dark">{{article.text|truncatechars:150}}</p>
 									<h6>{{article.author_first_name}} {{article.author_last_name}}</h6>
@@ -88,7 +88,7 @@
 					<h4 class="title-1 text-center">Featured</h4>
 					<br>
 					{% for feature in featured %}
-					<a href="#">
+					<a href="/publication/{{post.slug}}">
 						<img class="card-img-top" src="http://via.placeholder.com/286x180">
 						<div class="card-body">
 							<h6 class="card-title">{{feature.title}}</h6>

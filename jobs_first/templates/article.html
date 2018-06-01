@@ -1,22 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Jobs First | {{post.title}}{% endblock %}
+{% block title %}Jobs First | {{article.title}}{% endblock %}
 {% block content %}
 
 
 
 		<div class="header-img" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;">
-			<h1 class="text-white text-center">{{post.title}}</h1>
+			<h1 class="text-white text-center">{{article.title}}</h1>
 		</div>
 
 		<div class="container">
 			<br>
-			<a href="/media"><i class="fas fa-arrow-alt-circle-left fa-6x"></i></a>
-			<p class="float-right">{{post.publish_date}}</p>
+
+			{% if switch %}
+				<a href="/publication">
+			{% else %}
+				<a href="/media">
+			{% endif %}
+				<i class="fas fa-arrow-alt-circle-left fa-6x"></i></a>
+
+			{% if switch %}
+				<a href="/{{article.pdf}}"><i class="fas fa-download-alt-circle-left fa-6x"></i></a>
+			{% endif %}
+			<p class="float-right">{{article.publish_date}}</p>
 			<br>
 			<br>
-			{{post.text | safe}}
-			<i>{{post.author_first_name}} {{post.author_last_name}}</i>
+			<p>{{article.text|safe}}</p>
+
+			<i>{{article.author_first_name}} {{article.author_last_name}}</i>
 			<br>
 			<br>
 		</div>

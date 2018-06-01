@@ -93,3 +93,5 @@ class Logo(models.Model):
         verbose_name_plural = 'Main Logo'
 
 
+
+

@@ -34,7 +34,7 @@
 						<b><a class="nav-link" href="/our-work">OUR WORK</a></b>
 					</li>
 					<li class="nav-item">
-						<b><a class="nav-link" href="/publications">PUBLICATIONS</a></b>
+						<b><a class="nav-link" href="/publication">PUBLICATIONS</a></b>
 					</li>
 					<li class="nav-item">
 						<b><a class="nav-link" href="/media">MEDIA</a></b>
@@ -91,7 +91,7 @@
 								<a class="nav-link" href="/our-work">OUR WORK</a>
 							</li>
 							<li class="nav-item-footer">
-								<a class="nav-link" href="/publications">PUBLICATIONS</a>
+								<a class="nav-link" href="/publication">PUBLICATIONS</a>
 							</li>
 							<li class="nav-item-footer">
 								<a class="nav-link" href="/media">MEDIA</a>
@@ -133,7 +133,7 @@
 				</div>
 				<div class="col-md-6">
 					<h2 class="text-white text-center">Contact Us</h2>
-					<form action="{% url 'email' %}" method="post">
+					<form action="" method="POST">
 						{% csrf_token %}
 
 						{% for field in form %}

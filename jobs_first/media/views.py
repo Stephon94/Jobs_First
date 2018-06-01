@@ -10,9 +10,11 @@ def news_page(request):
 
     context_dict = {}
     banner = Banner.objects.get(id=1)
-    blog_posts = [article for article in News.objects.all() if (article.is_news == False and article.publish == True) and article.external_link == ""]
-    in_press = [article for article in News.objects.all() if article.is_news == True and article.publish == True]
-    featured = [article for article in News.objects.all() if article.is_news == False and article.external_link != ""]
+    blog_posts = [article for article in News.objects.all() if article.external_link == "" and article.publish == True]
+    for post in News.objects.all():
+        print post.external_link
+    in_press = [article for article in News.objects.all() if article.external_link != "" and article.publish == True]
+    featured = [article for article in News.objects.all() if article.is_featured == True]
 
     print featured
     context_dict['banner'] = banner
@@ -25,7 +27,8 @@ def news_page(request):
 
 def selected_post(request, slug):
     context_dict = {}
-    post = News.objects.get(slug=slug)
-    context_dict['post'] = post
+    article = News.objects.get(slug=slug)
+    print article
+    context_dict['article'] = article
 
     return render(request, 'article.html', context_dict)

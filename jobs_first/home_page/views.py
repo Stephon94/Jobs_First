@@ -20,7 +20,7 @@ def index(request):
     solution_block = home.Solution_Section.objects.get(id=1)
     solutions = home.Solution.objects.all()
     impact_block = home.Impact_Section.objects.get()
-    featured = [article for article in News.objects.all() if (article.is_news == False and article.external_link != "") and article.publish == True]
+    featured = [article for article in News.objects.all() if article.is_featured == True and article.publish == True]
     affiliates = Affiliates.objects.all()
     partners = Partner.objects.all()
     location_coordinates = []

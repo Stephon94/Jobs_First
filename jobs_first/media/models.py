@@ -20,19 +20,18 @@ class Banner (models.Model):
 class News(models.Model):
     external_link = models.URLField(blank=True)
     publish_date = models.DateField()
-    image = models.ImageField(upload_to='news_articles',null=True, blank=True)
-    publisher_name = models.CharField(max_length=200,blank=True)
+    image = models.ImageField(upload_to='news_articles', null=True, blank=True)
+    publisher_name = models.CharField(max_length=200, blank=True)
     title = models.CharField(max_length=200)
     text = RichTextField(blank=True)
     author_first_name = models.CharField(max_length=200)
     author_last_name = models.CharField(max_length=200)
     slug = AutoSlugField(populate_from='title')
     publish = models.BooleanField(default=False)
-    is_news = models.BooleanField(default=False)
+    is_featured = models.BooleanField(default=False)
 
 
     class Meta:
         verbose_name_plural = 'News'
     def __str__(self):
-        return '''{}:
-        News:{}'''.format(self.title, self.is_news)
+        return '''{}:'''.format(self.title)
