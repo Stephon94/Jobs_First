@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="press" role="tabpanel" aria-labelledby="press-tab">
 				{% for press in in_press %}
 					{% if press.image %}
-					<a href="#">
+					<a href="#" style="padding: 10px;">
 						<div class="col-md-7 offset-md-3">
 							<div class="row ">
 								<div class="col-md-4">
@@ -45,7 +45,7 @@
 						</div>
 					</a>
 					{% else %}
-					<a href="#">
+					<a href="#" style="padding: 10px;">
 						<div class="col-md-7 offset-md-3">
 							<div class="row ">
 								<div class="col-md-12 px-3">
@@ -64,7 +64,7 @@
 			<div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
 				{% for post in blog_posts %}
 					{% if post.image %}
-				<a href="/media/{{post.slug}}">
+				<a href="/media/{{post.slug}}" style="padding: 10px;"
 					<div class="col-md-7 offset-md-3">
 						<div class="row ">
 							<div class="col-md-4">
@@ -81,7 +81,7 @@
 					</div>
 				</a>
 					{% else %}
-				<a href="/media/{{post.slug}}">
+				<a href="/media/{{post.slug}}" style="padding: 10px;">
 					<div class="col-md-7 offset-md-3">
 						<div class="row ">
 							<div class="col-md-12 px-3">
@@ -104,20 +104,45 @@
 		<h5 class="title-1 text-center">Featured</h5>
 		<hr>
 		<!-- FOR EACH FEATURE -->
-		<div class="col-md-7 offset-md-3">
-			<div class="row ">
-				<div class="col-md-4">
-					<img src="http://via.placeholder.com/200x200" class="img-thumbnail w-100">
-				</div>
-				<div class="col-md-8 px-3">
-					<div class="card-block px-3">
-						<h5 class="title-1">09/08/2018</h5>
-						<h6 class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h6>
+		{% for feature in featured %}
+			{% if image %}
+				<a href="{{feature.external_link}}" style="padding: 10px;">
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-4">
+								<img src="/uploads/{{feature.image}}" class="img-thumbnail w-100">
+							</div>
+							<div class="col-md-8 px-3">
+								<div class="card-block px-3">
+									<h4 class="title-1">{{feature.publish_date}}</h4>
+									<h5 class="card-text">{{feature.title}}</h5>
+									<i>{{feature.author_first_name}} {{feature.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
+				</a>
+			{% else %}
+				<a href="{{feature.external_link}}" style="padding: 10px;">
+					<div class="col-md-7 offset-md-3">
+						<div class="row ">
+							<div class="col-md-4">
+								<img src="http://via.placeholder.com/100" class="img-thumbnail w-100">
+							</div>
+							<div class="col-md-8 px-3">
+								<div class="card-block px-3">
+									<h4 class="title-1">{{feature.publish_date}}</h4>
+									<h5 class="card-text">{{feature.title}}</h5>
+									<i>{{feature.author_first_name}} {{feature.author_last_name}}</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			{% endif %}
+		{% endfor %}
 		<!-- EndFOR -->
+		
 	</div>
 
 </div>
