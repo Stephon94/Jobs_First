@@ -29,5 +29,6 @@ def selected_post(request, slug):
     context_dict = {}
     article = News.objects.get(slug=slug)
     context_dict['article'] = article
+    context_dict['form'] = EmailForm()
 
     return render(request, 'article.html', context_dict)

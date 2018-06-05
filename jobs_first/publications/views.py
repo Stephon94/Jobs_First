@@ -35,6 +35,7 @@ def publications_article(request, slug):
     context_dict = {}
     article = Article.objects.get(slug=slug)
     context_dict['article'] = article
+    context_dict['form'] = EmailForm()
     context_dict['switch'] = -1
 
     return render(request,'article.html', context_dict)
