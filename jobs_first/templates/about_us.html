@@ -37,7 +37,7 @@
 		{% for staff in staff_members %}
 			{% if staff.active == True %}
 				<div class="col-md-3 mx-auto">
-					<img src="http://via.placeholder.com/100" class="w-50 rounded-circle user-img" data-toggle="collapse" data-target="#{{staff.name}}">
+					<img src="/uploads/{{staff.image}}" class="w-50 rounded-circle user-img" data-toggle="collapse" data-target="#{{staff.name}}">
 					<p><b>{{staff.name}}</b></p>
 					<p>{{staff.postition}}</p>
 					<p>{{staff.email}}</p>
