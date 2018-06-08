@@ -79,6 +79,7 @@ class Impact_Caraousel_Image(models.Model):
 
 class Navbar_Brand_Logo(models.Model):
 
+    name = models.CharField(max_length=256)
     image = models.ImageField(upload_to="main_logo", default='main_logo/jobsfirst_logo.png')
 
     class Meta:
@@ -91,6 +92,7 @@ class Navbar_Brand_Logo(models.Model):
 
 class Logo(models.Model):
 
+    name = models.CharField(max_length=256)
     image = models.ImageField(upload_to="partner_logos")
 
     class Meta:
@@ -98,15 +100,20 @@ class Logo(models.Model):
 
     def __str__(self):
 
-        return self.image
+        return self.name
 
 
 class Default(models.Model):
 
+    name = models.CharField(max_length=256)
     image = models.ImageField(upload_to="default")
 
     class Meta:
         verbose_name_plural = 'Default Staff Image'
+
+    def __str__(self):
+
+        return self.name
 
 
 

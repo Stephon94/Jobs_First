@@ -24,7 +24,7 @@ def index(request):
     featured = [article for article in News.objects.all() if article.is_featured == True and article.publish == True]
     affiliates = Affiliates.objects.all()
     partners = Partner.objects.all()
-    logo = home.Navbar_Brand_Logo.objects.get(id=1)
+    logo = home.Navbar_Brand_Logo.objects.all()[0]
     location_coordinates = []
 
     for partner in partners:

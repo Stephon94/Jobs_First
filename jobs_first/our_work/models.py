@@ -20,7 +20,8 @@ class Banner (models.Model):
 
 
 class Main_Image (models.Model):
-    
+
+    name = models.CharField(max_length=256)
     image = models.ImageField(upload_to='our_work_main_image')
 
     class Meta:
