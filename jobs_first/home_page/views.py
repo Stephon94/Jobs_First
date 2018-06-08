@@ -46,7 +46,7 @@ def index(request):
     context_dict['main_logo'] = '{}{}'.format(MEDIA_URL,logo.image)
     context_dict['form'] = EmailForm()
     context_dict['MEDIA_URL'] = MEDIA_URL
-    context_dict['affiliates'] = affiliates
+    context_dict['affiliates'] = home.Impact_Caraousel_Image.objects.all()
     context_dict['featured'] = featured
     context_dict['solutions'] = solutions
     context_dict['problem_block_title'] = problem_block.title

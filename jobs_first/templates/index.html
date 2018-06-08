@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load tags %}
 {% block title %}Jobs First | Home{% endblock %}
 {% block content %}
+
 
 
 <!-- <img src="/uploads/{{impact_block_image}}"> -->
@@ -119,7 +121,7 @@
 
 
 
-<div class="container-fluid bg1 text-center">
+<div class="container-fluid text-center" style="background:url({{impact_block_image|media_url}})no-repeat center center;background-size: cover;">
 	<h1 class="title-2">{{impact_block_title}}</h1>
 	<hr>
 	<p class="text-white">{{impact_block_text}}</p>
