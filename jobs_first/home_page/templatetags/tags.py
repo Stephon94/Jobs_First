@@ -1,4 +1,6 @@
 from django import template
+from home_page import models as home_models
+
 
 register = template.Library()
 
@@ -15,3 +17,14 @@ def email(request):
 
 # 	def subject(self):
 # 		return
+
+@register.filter
+def main_logo(value):
+	return '{}{}'.format(value, home_models.Navbar_Brand_Logo.objects.get(id=1).image)
+
+@register.filter
+def media_url(value):
+	if value == 'url':
+		return 'https://jobsfirst-assets.s3.amazonaws.com/media/'
+	else:
+		return 'https://jobsfirst-assets.s3.amazonaws.com/media/{}'.format(value)

@@ -10,4 +10,4 @@ admin.site.register(Solution_Section)
 admin.site.register(Solution)
 admin.site.register(Impact_Section)
 admin.site.register(Logo)
-
+admin.site.register(Navbar_Brand_Logo)

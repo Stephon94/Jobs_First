@@ -8,6 +8,7 @@ from django.shortcuts import render_to_response
 from forms import EmailForm
 import os
 from wsgiref.util import FileWrapper
+from jobs_first.settings import MEDIA_URL
 
 def publications_page(request):
 
@@ -27,6 +28,7 @@ def publications_page(request):
     context_dict['form'] = EmailForm()
     context_dict['articles'] = articles
     context_dict['featured'] = featured
+    context_dict['MEDIA_URL'] = MEDIA_URL
 
     return render(request,'publications.html', context_dict)
 
@@ -37,6 +39,7 @@ def publications_article(request, slug):
     context_dict['article'] = article
     context_dict['form'] = EmailForm()
     context_dict['switch'] = -1
+    context_dict['MEDIA_URL'] = MEDIA_URL
 
     return render(request,'article.html', context_dict)
 

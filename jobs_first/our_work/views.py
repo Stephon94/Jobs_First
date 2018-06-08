@@ -8,6 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from geopy.geocoders import Nominatim
 from forms import EmailForm
+from jobs_first.settings import MEDIA_URL
 
 geolocator = Nominatim()
 
@@ -56,6 +57,7 @@ def our_work_page(request):
     context_dict['banner'] = banner
     context_dict['partnership_types'] = partnership_types
     context_dict['partner_w_types'] = partnersANDtype
+    context_dict['MEDIA_URL'] = MEDIA_URL
 
     return render(request,'our_work.html', context_dict)
 
