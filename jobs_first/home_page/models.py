@@ -101,4 +101,13 @@ class Logo(models.Model):
         return self.image
 
 
+class Default(models.Model):
+
+    image = models.ImageField(upload_to="default")
+
+    class Meta:
+        verbose_name_plural = 'Default Staff Image'
+
+
+
 

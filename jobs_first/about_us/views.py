@@ -6,7 +6,7 @@ from forms import EmailForm
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
-from jobs_first.settings import MEDIA_URL
+from home_page import models as home_models
 
 def about_us_page(request):
 
@@ -26,6 +26,7 @@ def about_us_page(request):
     supporter_block = Supporter_Section.objects.get(id=1)
     supporters = Supporter.objects.all()
 
+    context_dict['default'] = home_models.Default.objects.all()[0]
     context_dict['banner'] = banner
     context_dict['form'] = EmailForm()
     context_dict['history_block_title'] = history_block.title
@@ -35,6 +36,5 @@ def about_us_page(request):
     context_dict['supporter_block_title'] = supporter_block.title
     context_dict['supporter_block_text'] = supporter_block.text
     context_dict['supporters'] = supporters
-    context_dict['MEDIA_URL'] = MEDIA_URL
 
     return render(request,'about_us.html', context_dict)
