@@ -6,17 +6,27 @@ from forms import EmailForm
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
+from home_page import models as home_models
 
 def about_us_page(request):
 
     context_dict = {}
-    banner = Banner.objects.get(id=1)
+    banners = Banner.objects.all()
+    num = 0
+    if len(banners) > 1:
+        while num < len(banners):
+            num += 1
+        banner = banners[num-1]
+    else:
+        banner = banners[0]
+    print banner
     history_block = History_Section.objects.get(id=1)
     directors = Director.objects.all()
     staff_members = Staff_Member.objects.all()
     supporter_block = Supporter_Section.objects.get(id=1)
     supporters = Supporter.objects.all()
 
+    context_dict['default'] = home_models.Default.objects.all()[0]
     context_dict['banner'] = banner
     context_dict['form'] = EmailForm()
     context_dict['history_block_title'] = history_block.title

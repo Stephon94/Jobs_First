@@ -67,30 +67,46 @@ class Impact_Section(models.Model):
 class Impact_Caraousel_Image(models.Model):
 
     title = models.CharField(max_length=256)
-    image = models.ImageField(upload_to='impact_caraousel',default= 'impact_banner/no-banner-img.jpg')
+    image = models.ImageField(upload_to='impact_caraousel',default= 'impact_caraousel/no-banner-img.jpg')
 
     class Meta:
-        verbose_name_plural = 'Home Page Impact Section'
+        verbose_name_plural = 'Home Page Impact Caraousel Images'
 
     def __str__(self):
 
         return self.title
 
 
-class Impact_Section_Image(models.Model):
+class Navbar_Brand_Logo(models.Model):
 
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to="main_logo", default='main_logo/jobsfirst_logo.png')
 
     class Meta:
-		verbose_name_plural = 'Impact Section Carousel Images'
+        verbose_name_plural = 'Main Logo'
+
+    def __str__(self):
+
+        return self.image
 
 
 class Logo(models.Model):
 
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to="partner_logos")
 
     class Meta:
-        verbose_name_plural = 'Main Logo'
+        verbose_name_plural = 'Partner Logo'
+
+    def __str__(self):
+
+        return self.image
+
+
+class Default(models.Model):
+
+    image = models.ImageField(upload_to="default")
+
+    class Meta:
+        verbose_name_plural = 'Default Staff Image'
 
 
 

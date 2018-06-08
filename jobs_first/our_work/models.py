@@ -9,8 +9,7 @@ geolocator = Nominatim()
 class Banner (models.Model):
 
     text = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='our_work_banner',default= 'about_banner/no-banner-img.jpg')
-    sub_image = models.ImageField(upload_to='our_work_banner', default='our_work_banner/solutions.jpg')
+    image = models.ImageField(upload_to='our_work_banner',default= 'our_work_banner/no-banner-img.jpg')
 
     class Meta:
 		verbose_name_plural = 'Our Work Banner'
@@ -19,6 +18,17 @@ class Banner (models.Model):
 
         return self.text
 
+
+class Main_Image (models.Model):
+    
+    image = models.ImageField(upload_to='our_work_main_image')
+
+    class Meta:
+        verbose_name_plural = "Our Work Main Image"
+
+    def __str__(self):
+        return self.text
+            
 class Partnership_Type (models.Model):
 
     title = models.CharField(max_length=200)
@@ -84,6 +94,7 @@ class Affiliates (models.Model):
     def __str__(self):
 
         return '{} :{}'.format(self.name, self.active)
+
 
 
 class Section (models.Model):

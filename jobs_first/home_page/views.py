@@ -10,6 +10,7 @@ from media.models import *
 from our_work.models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
+from jobs_first.settings import MEDIA_URL
 
 def index(request):
 
@@ -23,6 +24,7 @@ def index(request):
     featured = [article for article in News.objects.all() if article.is_featured == True and article.publish == True]
     affiliates = Affiliates.objects.all()
     partners = Partner.objects.all()
+    logo = home.Navbar_Brand_Logo.objects.get(id=1)
     location_coordinates = []
 
     for partner in partners:
@@ -41,7 +43,9 @@ def index(request):
 
 
     context_dict['banners'] = banners
+    context_dict['main_logo'] = '{}{}'.format(MEDIA_URL,logo.image)
     context_dict['form'] = EmailForm()
+    context_dict['MEDIA_URL'] = MEDIA_URL
     context_dict['affiliates'] = affiliates
     context_dict['featured'] = featured
     context_dict['solutions'] = solutions
