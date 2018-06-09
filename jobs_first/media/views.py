@@ -5,7 +5,7 @@ from forms import EmailForm
 from models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
-from jobs_first.settings import MEDIA_URL
+from home_page import models as home_models
 
 def news_page(request):
 
@@ -23,7 +23,7 @@ def news_page(request):
     context_dict['blog_posts'] = blog_posts
     context_dict['in_press'] = in_press
     context_dict['featured'] = featured
-    context_dict['MEDIA_URL'] = MEDIA_URL
+    context_dict['default'] = home_models.Default.objects.all()[2]
 
     return render(request,'media.html', context_dict)
 
@@ -32,6 +32,7 @@ def selected_post(request, slug):
     article = News.objects.get(slug=slug)
     context_dict['article'] = article
     context_dict['form'] = EmailForm()
-    context_dict['MEDIA_URL'] = MEDIA_URL
+    context_dict['default'] = home_models.Default.objects.all()[1]
+
 
     return render(request, 'article.html', context_dict)

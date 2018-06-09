@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load tags %}
 {% block title %}Jobs First | Publications{% endblock %}
 {% block content %}
 
 
-		<div class="header-img publications-header" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;"> 
+		<div class="header-img publications-header" style="background:url({{banner.image|media_url}})no-repeat center center;background-size: cover;"> 
 			<h1 class="text-white text-center">Publications</h1>
 		</div>
 
@@ -88,8 +89,8 @@
 					<h4 class="title-1 text-center">Featured</h4>
 					<br>
 					{% for feature in featured %}
-					<a href="/publication/{{post.slug}}">
-						<img class="card-img-top" src="/uploads/{{post.image}}">
+					<a href="/publication/{{feature.slug}}">
+						<img class="card-img-top" src="{{feature.image|media_url}}">
 						<div class="card-body">
 							<h6 class="card-title">{{feature.title}}</h6>
 						</div>

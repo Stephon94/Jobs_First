@@ -4,8 +4,8 @@
 {% block title %}Jobs First | About Us{% endblock %}
 {% block content %}
 
-<div class="header-img" style="background:url('{{url|media_url}}{{banner.image}}')no-repeat center center; background-size: cover;">
-	<h1 class="">{{banner.text}}</h1>
+<div class="header-img" style="background:url('{{banner.image|media_url}}')no-repeat center center; background-size: cover;">
+	<h1 class="text-white">{{banner.text}}</h1>
 </div>
 
 <div class="container-fluid text-center">

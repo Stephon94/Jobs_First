@@ -8,6 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from geopy.geocoders import Nominatim
 from forms import EmailForm
+from home_page import models as home_models
 
 geolocator = Nominatim()
 
@@ -47,6 +48,7 @@ def our_work_page(request):
 
     #context_dict['sections'] = sections
     context_dict['place_based'] = place_based
+    context_dict['default'] = home_models.Default.objects.all()[1]
     context_dict['sector_based'] = sector_based
     context_dict['in_school_based'] = in_school_based
     context_dict['emp_engagement'] = emp_engagement

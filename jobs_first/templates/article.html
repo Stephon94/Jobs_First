@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load tags %}
 {% block title %}Jobs First | {{article.title}}{% endblock %}
 {% block content %}
 
-
-		<div class="header-img" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;">
-			<h1 class="text-center">{{article.title}}</h1>
+		{% if article.image %}
+		<div class="header-img" style="background:url('{{article.image|media_url}}')no-repeat center center;background-size: cover;">
+		{% else %}
+		<div class="header-img" style="background:url('{{default.image|media_url}}')no-repeat center center;background-size: cover;">
+		{% endif %}
+			<h1 class="text-center text-white">{{article.title}}</h1>
 		</div>
 
 		<div class="container">
