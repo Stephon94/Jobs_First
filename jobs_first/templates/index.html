@@ -137,38 +137,15 @@
 						<div class="col-md-2 mx-auto">
 							<a href="/our-work?id=tab{{forloop.counter}}" class="text-white">
 								<div style="background:url('{{affiliate.image|media_url}}') no-repeat center center; min-height:85px;background-size: cover" class="vertical-text">
-<!-- =======
-							<a href="/our-work?id=tab1" class="text-white">
-								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
-									test
+
+								{{affiliate.title}}
 								</div>
 							</a>
 						</div>
-						<div class="col">
-							<a href="/our-work?id=tab2" class="text-white">
-								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
-									test
-								</div>
-							</a>
-						</div>
-						<div class="col">
-							<a href="/our-work?id=tab3" class="text-white">
-								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
-									test
-								</div>
-							</a>
-						</div>
-						<div class="col">
-							<a href="/our-work?id=tab4" class="text-white">
-								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
-									test
-								</div>
-							</a>
-						</div>
-						<div class="col">
-							<a href="/our-work?id=tab5" class="text-white">
-								<div style="background:url(/uploads/impact_banner/no-banner-img.jpg)no-repeat center center; min-height: 85px;" class="vertical-text">
->>>>>>> 29f9e0066878d99fcefc1b962f21e90265b009c8 -->
+						{% else %}
+						<div class="col-md-2 mx-auto">
+							<a href="/our-work?id=tab{{forloop.counter}}" class="text-white">
+								<div style="background:url('{{default.image|media_url}}') no-repeat center center; min-height:85px;background-size: cover" class="vertical-text">
 								{{affiliate.title}}
 								</div>
 							</a>

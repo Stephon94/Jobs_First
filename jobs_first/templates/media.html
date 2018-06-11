@@ -4,7 +4,7 @@
 {% block title %}Jobs First | Media{% endblock %}
 {% block content %}
 
-<div class="header-img" style="background:url(/uploads/{{banner.image}})no-repeat center center;background-size: cover;">
+<div class="header-img" style="background:url({{banner.image|media_url}})no-repeat center center;background-size: cover;">
 	<h1 class="text-white text-center container">{{banner.text}}</h1>
 </div>
 <br>
