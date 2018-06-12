@@ -74,7 +74,7 @@ class Impact_Caraousel_Image(models.Model):
 
     def __str__(self):
 
-        return self.title
+        return str(self.image).split("/")[1]
 
 
 class Navbar_Brand_Logo(models.Model):
