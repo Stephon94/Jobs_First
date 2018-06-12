@@ -15,7 +15,7 @@ def publications_page(request):
     context_dict = {}
 
     if request.method == "POST":
-    	context_dict['results'] = [article for article in Article.objects.all() if request.POST.get('keyword') in article.title]
+    	context_dict['results'] = [article for article in Article.objects.all() if request.POST.get('keyword').lower() in article.title.lower()]
         print request.POST.get('select')
         if request.POST.get('select') == 'Featured':
             context_dict['results'] = [article for article in context_dict['results'] if article.is_featured == True]

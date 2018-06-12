@@ -49,8 +49,8 @@
               <div id="heading{{forloop.counter}}">
                 <h5 class="mb-0">
                   <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{forloop.counter}}" aria-expanded="true" aria-controls="collapse{{forloop.counter}}">
-                    <p class="title-1 d-none d-md-block"><i class="fa fa-circle"></i><img class="px-3 " src="http://via.placeholder.com/100">{{partner.1.name}}</p>
-                    <p class="title-1 d-md-none"><i class="fa fa-circle"></i><img class="px-3 " src="http://via.placeholder.com/100"></p>
+                    <p class="title-1 d-none d-md-block"><i class="fa fa-circle"></i><img class="px-3" src="{{partner.1.image|media_url}}" style="width: 100px; padding: 5px;">{{partner.1.name}}</p>
+                    <p class="title-1 d-md-none"><i class="fa fa-circle"></i><img class="px-3 " style="width: 100px; padding: 5px;" src="{{partner.1.image|media_url}}"></p>
                   </button>
                 </h5>
               </div>
