@@ -1,5 +1,6 @@
 from django import template
 from home_page import models as home_models
+from forms import EmailForm
 
 
 register = template.Library()
@@ -30,3 +31,8 @@ def media_url(value):
 		return 'https://jobsfirst-assets.s3.amazonaws.com/media/'
 	else:
 		return 'https://jobsfirst-assets.s3.amazonaws.com/media/{}'.format(value)
+
+@register.filter
+def emailform(value):
+	return EmailForm()
+

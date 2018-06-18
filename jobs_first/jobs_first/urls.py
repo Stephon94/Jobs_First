@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^about/', include('about_us.urls')),
     url(r'^our-work/', include('our_work.urls')),
     url(r'^publication/', include('publications.urls')),
+    url(r'^page/', include('generic_page.urls')),
     url(r'^Article/', include('publications.urls')),
     url(r'^media/', include('media.urls')),
     url(r'^admin/', admin.site.urls),

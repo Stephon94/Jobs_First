@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'about_us',
     'our_work',
     'publications',
+    'generic_page',
     'media',
     'ckeditor',
     'storages'
